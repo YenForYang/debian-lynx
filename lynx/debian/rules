@@ -36,6 +36,7 @@ endif
         --enable-read-eta --enable-scrollbar --enable-syslog \
 	--with-zlib --with-bzlib --without-included-gettext \
 	--with-screen=ncursesw --enable-justify-elts \
+	--program-prefix='' \
 	$(CONFTLS)
 
 override_dh_autoreconf:

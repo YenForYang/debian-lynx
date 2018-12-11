@@ -9,4 +9,4 @@ Depends: lynx (= 2.8.9rel.1-2)
 Section: debug
 Priority: optional
 Description: debug symbols for lynx
-Build-Ids: 4b34b82e7bde296e8a22fdfe28a13fcbc125370b
+Build-Ids: 64419a37bb69ffffecf98add36eeb7cb53d47b29

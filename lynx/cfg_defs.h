@@ -121,7 +121,7 @@ static const struct {
 	{ "env_CC_set",	"'set'" },
 	{ "env_CC_value",	"'icc'" },
 	{ "env_CFLAGS_set",	"'set'" },
-	{ "env_CFLAGS_value",	"'-g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP'" },
+	{ "env_CFLAGS_value",	"'-g -O2 -fdebug-prefix-map=/dev/shm/builddeps/debian-lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP'" },
 	{ "env_CPPFLAGS_set",	"'set'" },
 	{ "env_CPPFLAGS_value",	"'-Wdate-time -D_FORTIFY_SOURCE=2'" },
 	{ "env_CPP_set",	"''" },

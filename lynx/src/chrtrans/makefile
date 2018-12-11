@@ -18,7 +18,7 @@ top_builddir	= ../..
 
 CC		= icc
 CPP		= icc -E -C
-CFLAGS		= -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP 
+CFLAGS		= -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/debian-lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP 
 EXTRA_CPPFLAGS	= 
 CPPFLAGS	= -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600
 

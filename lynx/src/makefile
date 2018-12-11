@@ -20,7 +20,7 @@ localedir	= /usr/share/locale
 # Symbols which the configure script can set in each makefile:
 CC		= icc
 CPP		= icc -E -C
-CFLAGS		= -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP 
+CFLAGS		= -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/debian-lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP 
 DEFS		= -DHAVE_CONFIG_H
 CHARSET_DEFS	= 
 EXTRA_CPPFLAGS	= 

@@ -19,17 +19,17 @@ Changes:
    * Mark lynx-common as "Multi-Arch: foreign", too. (Closes: #906443)
    * Declare compliance with Debian Policy 4.2.0. (No changes needed.)
 Checksums-Sha1:
- e8c78e0bbfdd7bcebf31b37b4a75f5a3df7941f6 765528 lynx-common_2.8.9rel.1-2_all.deb
- 4b04a7f6eded941123a25f39d2a7c76b15fb113d 1237020 lynx-dbgsym_2.8.9rel.1-2_amd64.deb
- ae5810a36a8fa3a756cdefdff223049ca7007222 6843 lynx_2.8.9rel.1-2_amd64.buildinfo
- 61d7b4f273b7db2bcaf03f5a05d3a8af00067dff 851008 lynx_2.8.9rel.1-2_amd64.deb
+ ee4a362c3e0ccedebf844a9d12103a6837b17b88 765504 lynx-common_2.8.9rel.1-2_all.deb
+ 7ce0097bd435db4c73d7c6657cc1899de789e9ef 1236660 lynx-dbgsym_2.8.9rel.1-2_amd64.deb
+ 3f29930718826a5c5069395cc58d4cb8cc41f133 6857 lynx_2.8.9rel.1-2_amd64.buildinfo
+ 3dbde8399ba950b954e3e4e4315af0182bd5fd10 850264 lynx_2.8.9rel.1-2_amd64.deb
 Checksums-Sha256:
- c3c9d63cdc462814446927c8dac84267e6bde193e5379a28befb80b88d0ecfcc 765528 lynx-common_2.8.9rel.1-2_all.deb
- 6e59a51699a5f7562f992b53311e4dffa982244460b1700e4c8779dec06db9a2 1237020 lynx-dbgsym_2.8.9rel.1-2_amd64.deb
- 5b276936c15083512d769eeb5f55c1ba7a2371196e6a5634e634f607ea79e8e2 6843 lynx_2.8.9rel.1-2_amd64.buildinfo
- 4bb570c0162aa8126879928858ca76444600185a38f33c1a5e2198fb943f288f 851008 lynx_2.8.9rel.1-2_amd64.deb
+ a044d0b34e0f23c6ef73013c76e4ce533f33958b37b6d3c40ff77e17762211e6 765504 lynx-common_2.8.9rel.1-2_all.deb
+ 15b757adcc8a805c446eb4199e299968641f399dd224ead1554f204022e219cb 1236660 lynx-dbgsym_2.8.9rel.1-2_amd64.deb
+ 1c2aa4aad266d2e58477c182fc2ba4bd9e88de2eb447579431ee299c3ffea5f4 6857 lynx_2.8.9rel.1-2_amd64.buildinfo
+ c1d752e9be31dadd21486bbb3c7b70afd71ed0724071343cf313f24791314e2d 850264 lynx_2.8.9rel.1-2_amd64.deb
 Files:
- 22b4244befab7de401f5710cf1b082ab 765528 web optional lynx-common_2.8.9rel.1-2_all.deb
- febf693ed900158958037cabcf23fc3f 1237020 debug optional lynx-dbgsym_2.8.9rel.1-2_amd64.deb
- ea452ce9a7906da49e28dab5e1fb1755 6843 web optional lynx_2.8.9rel.1-2_amd64.buildinfo
- bb6e07818a9f69c969f3cbb6f0739dd0 851008 web optional lynx_2.8.9rel.1-2_amd64.deb
+ bfbd7626436e1e7661ccc5fdc7890f0d 765504 web optional lynx-common_2.8.9rel.1-2_all.deb
+ 52d4fa345c1ca0290f7ec2523837cafc 1236660 debug optional lynx-dbgsym_2.8.9rel.1-2_amd64.deb
+ 5dbcbc9f091ef29816e0b83a426d4dc7 6857 web optional lynx_2.8.9rel.1-2_amd64.buildinfo
+ c4fba3671814bfe46b00a28401b963a9 850264 web optional lynx_2.8.9rel.1-2_amd64.deb

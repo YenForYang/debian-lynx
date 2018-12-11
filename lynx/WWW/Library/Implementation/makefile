@@ -41,7 +41,7 @@ CPPOPTS		= $(DEFS) $(LYFLAGS) \
 		-I$(top_srcdir)/src \
 		$(INTLDIR_CPPFLAGS) -I$(WWWINC) $(EXTRA_CPPFLAGS) $(CPPFLAGS)
 
-LY_CFLAGS	= -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP 
+LY_CFLAGS	= -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/debian-lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP 
 CFLAGS		= $(CPPOPTS) $(LY_CFLAGS)
 
 LINT		= 

@@ -14,7 +14,7 @@ builddir	= .
 
 
 CC		= icc
-CFLAGS		= -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP 
+CFLAGS		= -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/debian-lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP 
 DEFS		= -DHAVE_CONFIG_H
 CPPFLAGS	= -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600
 LINT		= 
@@ -195,7 +195,7 @@ SRC_CFLAGS = \
 	WWWINC=$(WWW_DIR) \
 	WWWLIB="../$(WWW_DIR)/libwww.a"
 
-actual_PROG  = `echo lynx|sed 's,^,x86_64-linux-gnu-,'`
+actual_PROG  = `echo lynx|sed 's,^,,'`
 binary_PROG  = $(actual_PROG)$x
 
 all lynx$x: cfg_defs.h LYHelp.h

@@ -22,4 +22,4 @@ debian/tmp/usr/share/locale/uk
 debian/tmp/usr/share/locale/vi
 debian/tmp/usr/share/locale/zh_CN
 debian/tmp/usr/share/locale/zh_TW
-debian/tmp/usr/share/man/man1/x86_64-linux-gnu-lynx.1
+debian/tmp/usr/share/man/man1/lynx.1

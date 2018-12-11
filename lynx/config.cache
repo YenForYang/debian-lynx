@@ -43,7 +43,7 @@ ac_cv_enable_sign_compare_warning=${ac_cv_enable_sign_compare_warning='yes'}
 ac_cv_env_CC_set='set'
 ac_cv_env_CC_value='icc'
 ac_cv_env_CFLAGS_set='set'
-ac_cv_env_CFLAGS_value='-g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP'
+ac_cv_env_CFLAGS_value='-g -O2 -fdebug-prefix-map=/dev/shm/builddeps/debian-lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP'
 ac_cv_env_CPPFLAGS_set='set'
 ac_cv_env_CPPFLAGS_value='-Wdate-time -D_FORTIFY_SOURCE=2'
 ac_cv_env_CPP_set=''
