@@ -1,0 +1,35 @@
+Format: 1.8
+Date: Sat, 18 Aug 2018 00:29:31 +0200
+Source: lynx
+Binary: lynx-common lynx
+Built-For-Profiles: nobiarch nocheck nodoc
+Architecture: all amd64
+Version: 2.8.9rel.1-2
+Distribution: unstable
+Urgency: medium
+Maintainer: Debian Lynx Packaging Team <pkg-lynx-maint@lists.alioth.debian.org>
+Changed-By: Axel Beckert <abe@debian.org>
+Description:
+ lynx       - classic non-graphical (text-mode) web browser
+ lynx-common - shared files for lynx package
+Closes: 906443
+Changes:
+ lynx (2.8.9rel.1-2) unstable; urgency=medium
+ .
+   * Mark lynx-common as "Multi-Arch: foreign", too. (Closes: #906443)
+   * Declare compliance with Debian Policy 4.2.0. (No changes needed.)
+Checksums-Sha1:
+ e8c78e0bbfdd7bcebf31b37b4a75f5a3df7941f6 765528 lynx-common_2.8.9rel.1-2_all.deb
+ 4b04a7f6eded941123a25f39d2a7c76b15fb113d 1237020 lynx-dbgsym_2.8.9rel.1-2_amd64.deb
+ ae5810a36a8fa3a756cdefdff223049ca7007222 6843 lynx_2.8.9rel.1-2_amd64.buildinfo
+ 61d7b4f273b7db2bcaf03f5a05d3a8af00067dff 851008 lynx_2.8.9rel.1-2_amd64.deb
+Checksums-Sha256:
+ c3c9d63cdc462814446927c8dac84267e6bde193e5379a28befb80b88d0ecfcc 765528 lynx-common_2.8.9rel.1-2_all.deb
+ 6e59a51699a5f7562f992b53311e4dffa982244460b1700e4c8779dec06db9a2 1237020 lynx-dbgsym_2.8.9rel.1-2_amd64.deb
+ 5b276936c15083512d769eeb5f55c1ba7a2371196e6a5634e634f607ea79e8e2 6843 lynx_2.8.9rel.1-2_amd64.buildinfo
+ 4bb570c0162aa8126879928858ca76444600185a38f33c1a5e2198fb943f288f 851008 lynx_2.8.9rel.1-2_amd64.deb
+Files:
+ 22b4244befab7de401f5710cf1b082ab 765528 web optional lynx-common_2.8.9rel.1-2_all.deb
+ febf693ed900158958037cabcf23fc3f 1237020 debug optional lynx-dbgsym_2.8.9rel.1-2_amd64.deb
+ ea452ce9a7906da49e28dab5e1fb1755 6843 web optional lynx_2.8.9rel.1-2_amd64.buildinfo
+ bb6e07818a9f69c969f3cbb6f0739dd0 851008 web optional lynx_2.8.9rel.1-2_amd64.deb

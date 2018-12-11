@@ -1,0 +1,1141 @@
+ dpkg-buildpackage -D -us -uc -ui -b -Jauto -Pnobiarch,nocheck,nodoc
+dpkg-buildpackage: info: source package lynx
+dpkg-buildpackage: info: source version 2.8.9rel.1-2
+dpkg-buildpackage: info: source distribution unstable
+dpkg-buildpackage: info: source changed by Axel Beckert <abe@debian.org>
+ dpkg-source --before-build .
+dpkg-buildpackage: info: host architecture amd64
+dpkg-source: info: using patch list from debian/patches/series
+dpkg-source: info: applying lynxcfg.patch
+dpkg-source: info: applying aboutlynx.patch
+dpkg-source: info: applying 21_do_not_strip_-g.diff
+dpkg-source: info: applying nested_tables.patch
+ debian/rules clean
+dh clean
+   dh_clean
+ debian/rules binary
+dh binary
+   dh_update_autotools_config
+   debian/rules override_dh_autoreconf
+make[1]: Entering directory '/dev/shm/builddeps/lynx/lynx'
+dh_autoreconf autoreconf-dickey -- -f -i
+make[1]: Leaving directory '/dev/shm/builddeps/lynx/lynx'
+   debian/rules override_dh_auto_configure
+make[1]: Entering directory '/dev/shm/builddeps/lynx/lynx'
+sed -i -e s/libssl-dev/libgnutls28-dev/g debian/control
+env cf_cv_SYSTEM_MAIL=/usr/sbin/sendmail \
+COMPRESS=/usr/bin/compress BZIP2=/bin/bzip2 UNZIP=/usr/bin/unzip \
+ZIP=/usr/bin/zip \
+LIBS="-lbsd" \
+DH_COMPAT=10 dh_auto_configure --verbose -- \
+--sysconfdir=/etc/lynx \
+--enable-8bit-toupper --enable-externs --enable-debug \
+--enable-nsl-fork --enable-cgi-links --enable-exec-links \
+--enable-exec-scripts --enable-persistent-cookies --enable-nls \
+--enable-gzip-help --enable-prettysrc --enable-source-cache \
+--enable-cjk --enable-default-colors --enable-nested-tables \
+--enable-japanese-utf8 --enable-ipv6 --enable-htmlized-cfg \
+        --enable-forms-options --enable-justify-elts --enable-partial \
+        --enable-read-eta --enable-scrollbar --enable-syslog \
+--with-zlib --with-bzlib --without-included-gettext \
+--with-screen=ncursesw --enable-justify-elts \
+--with-gnutls=/usr
+	./configure --build=x86_64-linux-gnu --prefix=/usr --includedir=\${prefix}/include --mandir=\${prefix}/share/man --infodir=\${prefix}/share/info --sysconfdir=/etc --localstatedir=/var --disable-silent-rules --libdir=\${prefix}/lib/x86_64-linux-gnu --libexecdir=\${prefix}/lib/x86_64-linux-gnu --disable-maintainer-mode --disable-dependency-tracking --sysconfdir=/etc/lynx --enable-8bit-toupper --enable-externs --enable-debug --enable-nsl-fork --enable-cgi-links --enable-exec-links --enable-exec-scripts --enable-persistent-cookies --enable-nls --enable-gzip-help --enable-prettysrc --enable-source-cache --enable-cjk --enable-default-colors --enable-nested-tables --enable-japanese-utf8 --enable-ipv6 --enable-htmlized-cfg --enable-forms-options --enable-justify-elts --enable-partial --enable-read-eta --enable-scrollbar --enable-syslog --with-zlib --with-bzlib --without-included-gettext --with-screen=ncursesw --enable-justify-elts --with-gnutls=/usr
+configure: loading site script /usr/share/config.site
+./configure: 1: /usr/share/config.site: [[: not found
+./configure: 1: /usr/share/config.site: -z: not found
+./configure: 1: /usr/share/config.site: -z: not found
+./configure: 1: /usr/share/config.site: -z: not found
+./configure: 1: /usr/share/config.site: -z: not found
+./configure: 1: /usr/share/config.site: -z: not found
+checking build system type... (cached) x86_64-pc-linux-gnu
+checking host system type... (cached) x86_64-pc-linux-gnu
+checking target system type... (cached) x86_64-pc-linux-gnu
+Configuring for linux-gnu
+checking for DESTDIR... 
+checking for C compiler default output... a.out
+checking whether the C compiler works... yes
+checking whether we are cross compiling... no
+checking for executable suffix... 
+checking for object suffix... (cached) o
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether icc accepts -g... (cached) yes
+checking version of icc... 19.0.1.144
+checking for icc option to accept ANSI C... (cached) none needed
+checking $CC variable... ok
+checking how to run the C preprocessor... icc -E
+checking if preprocessor -C option works... yes
+checking whether ln -s works... yes
+checking whether make sets ${MAKE}... (cached) yes
+checking for a BSD compatible install... /usr/bin/install
+checking for bison... (cached) bison -y
+checking for lint... no
+checking for cppcheck... no
+checking for splint... no
+checking for makeflags variable... -${MAKEFLAGS}
+checking if filesystem supports mixed-case filenames... yes
+checking for exctags... no
+checking for ctags... no
+checking for exetags... no
+checking for etags... no
+checking for ctags... (cached) yes
+checking for etags... (cached) yes
+checking for windres... none
+checking for ranlib... (cached) /usr/bin/x86_64-linux-gnu-ranlib
+checking for ar... (cached) xiar
+checking for options to update archives... -curvU
+checking if you want to see long compiling messages... yes
+checking if you want to check memory-leaks... no
+checking if you want to enable debug-code... yes
+checking if you want to enable lynx trace code *recommended* ... yes
+checking if you want verbose trace code... no
+checking if you want to turn on gcc warnings... no
+checking if you want to use dbmalloc for testing... no
+checking if you want to use dmalloc for testing... no
+checking $CC variable... ok
+checking for icc option to accept ANSI C... -DCC_HAS_PROTOS
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking for _LARGE_FILES value needed for large files... no
+checking for _LARGEFILE_SOURCE value needed for large files... no
+checking for fseeko... (cached) yes
+checking whether to use struct dirent64... no
+checking for PATH separator... :
+checking for msginit... /usr/bin/msginit
+checking for ranlib... (cached) /usr/bin/x86_64-linux-gnu-ranlib
+checking for ANSI C header files... (cached) yes
+checking for inline... (cached) inline
+checking for sys/types.h... (cached) yes
+checking for sys/stat.h... (cached) yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking for memory.h... (cached) yes
+checking for strings.h... (cached) yes
+checking for inttypes.h... (cached) yes
+checking for stdint.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for off_t... (cached) yes
+checking for size_t... (cached) yes
+checking for working alloca.h... (cached) yes
+checking for alloca... (cached) yes
+checking for stdlib.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for getpagesize... (cached) yes
+checking for working mmap... (cached) yes
+checking whether we are using the GNU C Library 2.1 or newer... yes
+checking for argz.h... (cached) yes
+checking for limits.h... (cached) yes
+checking for locale.h... (cached) yes
+checking for nl_types.h... (cached) yes
+checking for malloc.h... (cached) yes
+checking for stddef.h... (cached) yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for sys/param.h... (cached) yes
+checking for feof_unlocked... (cached) yes
+checking for fgets_unlocked... (cached) yes
+checking for getcwd... (cached) yes
+checking for getegid... (cached) yes
+checking for geteuid... (cached) yes
+checking for getgid... (cached) yes
+checking for getuid... (cached) yes
+checking for mempcpy... (cached) yes
+checking for munmap... (cached) yes
+checking for putenv... (cached) yes
+checking for setenv... (cached) yes
+checking for setlocale... (cached) yes
+checking for stpcpy... (cached) yes
+checking for strchr... (cached) yes
+checking for strcasecmp... (cached) yes
+checking for strdup... (cached) yes
+checking for strtoul... (cached) yes
+checking for tsearch... (cached) yes
+checking for __argz_count... (cached) yes
+checking for __argz_stringify... (cached) yes
+checking for __argz_next... (cached) yes
+checking for iconv... (cached) yes
+checking if the declaration of iconv() needs const.... no
+checking for nl_langinfo and CODESET... (cached) yes
+checking for LC_MESSAGES... (cached) yes
+checking whether NLS is requested... yes
+checking whether included gettext is requested... no
+checking for msgfmt... (cached) /usr/bin/msgfmt
+checking for gmsgfmt... (cached) /usr/bin/msgfmt
+checking for xgettext... (cached) /usr/bin/xgettext
+checking for libintl.h and gettext()... yes
+checking for dcgettext... (cached) yes
+checking for catalogs to be installed...  ca cs da de eo et fi fr hu id it ja nl pt_BR ru sl sv tr uk vi zh_CN zh_TW en
+checking if we should use included message-library... yes
+checking for libintl.h... (cached) yes
+checking if you want full utility pathnames... yes
+checking for system mailer... (cached) /usr/sbin/sendmail
+checking system mail flags... -t -oi
+checking if we must define _GNU_SOURCE... yes
+checking if we should also define _DEFAULT_SOURCE... yes
+checking if _XOPEN_SOURCE really is set... yes
+checking if SIGWINCH is defined... yes
+checking if you want NSS compatible SSL libraries... no
+checking if you want ssl library... no
+checking if you want gnutls support... /usr
+checking if you want gnutls-openssl compat... no
+checking if you want socks library... no
+checking if you want socks5 library... no
+checking for network libraries... working...
+checking for gethostname... (cached) yes
+checking for main in -linet... no
+checking for socket... (cached) yes
+checking for gethostbyname... (cached) yes
+checking for inet_ntoa... yes
+checking for gethostbyname... (cached) yes
+checking for strcasecmp... (cached) yes
+checking for inet_aton function... yes
+checking if you want to use pkg-config... yes
+checking for gnutls_protocol_set_priority... no
+checking for gnutls_rnd... yes
+checking for X509 support... no
+checking whether to enable ipv6... yes
+checking ipv6 stack type... linux-glibc
+checking for IPv6 library if required... none
+checking working getaddrinfo... yes
+checking for screen type... ncursesw
+checking for specific curses-directory... no
+checking for multibyte character support... yes
+checking pkg-config for ncursesw... yes
+checking if the ncursesw package files work... yes
+checking for terminfo header... term.h
+checking for an rpath option... -Wl,-rpath,
+checking for chtype typedef... yes
+checking if chtype is scalar or struct... scalar
+checking if you want the wide-curses features... yes
+checking if color-style code should be used... yes
+checking for location of style-sheet file... /etc/lynx/lynx.lss
+checking for the default configuration-file... /etc/lynx/lynx.cfg
+checking for the default configuration-path... /etc/lynx
+checking if htmlized lynx.cfg should be built... yes
+checking if local doc directory should be linked to help page... no
+checking for MIME library directory... /etc
+checking if locale-charset selection logic should be used... yes
+checking if you want only a few charsets... no
+checking for ANSI C header files... (cached) yes
+checking whether time.h and sys/time.h may both be included... (cached) yes
+checking for dirent.h that defines DIR... (cached) yes
+checking for opendir in -ldir... no
+checking for arpa/inet.h... (cached) yes
+checking for fcntl.h... (cached) yes
+checking for limits.h... (cached) yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking for sys/fcntl.h... (cached) yes
+checking for sys/filio.h... no
+checking for sys/ioctl.h... (cached) yes
+checking for sys/param.h... (cached) yes
+checking for sys/timeb.h... (cached) yes
+checking for sys/time.h... (cached) yes
+checking for syslog.h... (cached) yes
+checking for termio.h... (cached) yes
+checking for termios.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for vfork.h... no
+checking termio.h and termios.h... yes
+checking for sigaction and structs... yes
+checking for sys/wait.h... (cached) yes
+checking for union wait... no
+checking for uid_t in sys/types.h... (cached) yes
+checking type of array argument to getgroups... (cached) gid_t
+checking for off_t... (cached) yes
+checking for pid_t... (cached) yes
+checking for uid_t in sys/types.h... (cached) yes
+checking for mode_t... (cached) yes
+checking for ssize_t... (cached) yes
+checking for socklen_t... (cached) yes
+checking for long long type... yes
+checking for tm.tm_gmtoff... yes
+checking for int... (cached) yes
+checking size of int... (cached) 4
+checking for long... (cached) yes
+checking size of long... (cached) 8
+checking for off_t... (cached) yes
+checking size of off_t... (cached) 8
+checking for time_t... (cached) yes
+checking size of time_t... (cached) 8
+checking for intptr_t... (cached) yes
+checking for working alloca.h... (cached) yes
+checking for alloca... (cached) yes
+checking for unistd.h... (cached) yes
+checking for vfork.h... (cached) no
+checking for fork... (cached) yes
+checking for vfork... (cached) yes
+checking for working fork... (cached) yes
+checking for working vfork... (cached) yes
+checking if we should use fcntl or ioctl... ioctl
+checking for broken/missing definition of remove... no
+checking for lstat... (cached) yes 
+checking for atoll... yes
+checking for ctermid... (cached) yes
+checking for cuserid... yes
+checking for ftime... (cached) yes
+checking for getcwd... (cached) yes
+checking for getgroups... (cached) yes
+checking for gettimeofday... (cached) yes
+checking for getuid... (cached) yes
+checking for mktemp... (cached) yes
+checking for mkdtemp... (cached) yes
+checking for popen... (cached) yes
+checking for putenv... (cached) yes
+checking for readdir... (cached) yes
+checking for setuid... (cached) yes
+checking for strerror... (cached) yes
+checking for truncate... (cached) yes
+checking for ttyname... (cached) yes
+checking for unsetenv... (cached) yes
+checking for sleep... (cached) yes
+checking for usleep... (cached) yes
+checking for vasprintf... (cached) yes
+checking for waitpid... (cached) yes
+checking for mktime... (cached) yes
+checking for strstr... (cached) yes
+checking for random-integer functions... arc4random_stir/arc4random
+checking for range of random-integers... 0xFFFFFFFFUL
+checking if <bsd/stdlib.h> should be included... no
+checking if <bsd/random.h> should be included... no
+configure: WARNING: no header file found for arc4random
+checking for sleep declaration... yes
+checking for strstr declaration... yes
+checking for getgrgid declaration... yes
+checking for getgrnam declaration... yes
+checking if TRUE/FALSE are defined... yes
+checking if external errno is declared... yes
+checking if external errno exists... no
+checking if we can set errno... yes
+checking for setlocale()... yes
+checking if NGROUPS is defined... yes
+checking if external sys_nerr is declared... yes
+checking if external sys_nerr exists... yes
+checking if external sys_errlist is declared... yes
+checking if external sys_errlist exists... yes
+checking for lastlog.h... (cached) yes
+checking for paths.h... (cached) yes
+checking for lastlog path... _PATH_LASTLOG
+checking for utmp implementation... utmpx
+checking if utmpx.ut_host is declared... yes
+checking if utmpx.ut_syslen is declared... no
+checking if utmpx.ut_name is declared... ut_name
+checking for exit-status in utmpx... ut_exit.e_exit
+checking if utmpx.ut_xtime is declared... define
+checking if utmpx.ut_session is declared... yes
+checking if utmpx is SYSV flavor... yes
+checking if external h_errno exists... no
+checking if bibp: URLs should be supported... yes
+checking if configuration info should be browsable... yes
+checking if new-style forms-based options screen should be used... yes
+checking if old-style options menu should be used... yes
+checking if sessions code should be used... yes
+checking if session-caching code should be used... yes
+checking if address-list page should be used... yes
+checking if experimental CJK logic should be used... yes
+checking if experimental Japanese UTF-8 logic should be used... yes
+checking for iconv... (cached) yes
+checking if the declaration of iconv() needs const.... (cached) no
+checking if you want to use default-colors... yes
+checking if experimental keyboard-layout logic should be used... no
+checking if experimental nested-table logic should be used... yes
+checking if alternative line-edit bindings should be used... yes
+checking if ascii case-conversion should be used... yes
+checking if you want to use extended HTML DTD logic... yes
+checking if file-upload logic should be used... yes
+checking if IDNA support should be used... yes
+checking if element-justification logic should be used... yes
+checking if partial-display should be used... yes
+checking if persistent-cookie logic should be used... yes
+checking if html source should be colorized... yes
+checking if progress-bar code should be used... yes
+checking if read-progress message should show ETA... yes
+checking if source caching should be used... yes
+checking if scrollbar code should be used... yes
+checking if charset-selection logic should be used... no
+checking if you want to use external commands... yes
+checking if you want to use setfont support... no
+checking if you want cgi-link support... yes
+checking if you want change-exec support... no
+checking if you want exec-links support... yes
+checking if you want exec-scripts support... yes
+checking if you want internal-links feature... no
+checking if you want to fork NSL requests... yes
+checking if you want to log URL requests via syslog... yes
+checking if you want to underline links... no
+checking if help files should be gzip'ed... yes
+checking if you want to use libbz2 for decompression of some bzip2 files... yes
+checking if you want to use zlib for decompression of some gzip files... yes
+checking for zError... yes
+checking if you want to exclude FINGER code... no
+checking if you want to exclude GOPHER code... no
+checking if you want to exclude NEWS code... no
+checking if you want to exclude FTP code... no
+checking if you want to include WAIS code... no
+checking if directory-editor code should be used... yes
+checking if you wish to allow extracting from archives via DirEd... yes
+checking if DirEd mode should override keys... yes
+checking if you wish to allow permissions commands via DirEd... yes
+checking if you wish to allow executable-permission commands via DirEd... yes
+checking if you wish to allow "tar" commands from DirEd... yes
+checking if you wish to allow "uudecode" commands from DirEd... yes
+checking if you wish to allow "zip" and "unzip" commands from DirEd... yes
+checking if you wish to allow "gzip" and "gunzip" commands from DirEd... yes
+checking if you want long-directory listings... yes
+checking if parent-directory references are permitted... yes
+checking for telnet... /usr/bin/telnet
+checking for tn3270... no
+checking for tn3270... no
+checking for rlogin... /usr/bin/rlogin
+checking for mv... (cached) /bin/mv
+checking for gzip... /bin/gzip
+checking for gunzip... /bin/gunzip
+checking for /usr/bin/unzip... /usr/bin/unzip
+checking for /bin/bzip2... /bin/bzip2
+checking for tar... (cached) /bin/tar
+checking for /usr/bin/compress... /usr/bin/compress
+checking for rm... /bin/rm
+checking for uudecode... /usr/bin/uudecode
+checking for zcat... /bin/zcat
+checking for /usr/bin/zip... /usr/bin/zip
+checking for /usr/bin/install... /usr/bin/install
+checking if we can include termio.h with curses... yes
+checking for ncursesw/term.h... (cached) yes
+checking for term.h... (cached) yes
+checking if curses supports alternate-character set... acs_map
+checking if curses supports fancy attributes... yes
+checking for function curses_version... yes
+checking for obsolete/broken version of ncurses... no
+checking if curses supports color attributes... yes
+checking for termio.h... (cached) yes
+checking for termios.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking whether termios.h needs _POSIX_SOURCE... no
+checking declaration of size-change... yes
+checking if ttytype is declared in curses library... yes
+checking if curses supports wide characters... yes
+checking if we must include wchar.h to declare mbstate_t... no
+checking definition to turn on extended curses functions... none
+checking for term.h... (cached) term.h
+checking for unctrl.h... unctrl.h
+checking for assume_default_colors... yes
+checking for cbreak... yes
+checking for define_key... yes
+checking for delscreen... yes
+checking for getattrs... yes
+checking for getbegx... yes
+checking for getbegy... yes
+checking for keypad... yes
+checking for napms... yes
+checking for newpad... yes
+checking for newterm... yes
+checking for pnoutrefresh... yes
+checking for resizeterm... yes
+checking for touchline... yes
+checking for touchwin... yes
+checking for use_default_colors... yes
+checking for use_legacy_coding... yes
+checking for wattr_get... yes
+checking for wborder... yes
+checking for wredrawln... yes
+checking for wresize... yes
+checking for _nc_free_and_exit... yes
+checking for _nc_freeall... yes
+checking if rpath-hack should be disabled... no
+checking for updated LDFLAGS... maybe
+checking for ldd... (cached) /usr/bin/ldd
+srcdir is .
+updating cache config.cache
+configure: creating ./config.status
+config.status: creating makefile
+config.status: creating WWW/Library/Implementation/makefile
+config.status: creating src/makefile
+config.status: creating src/chrtrans/makefile
+config.status: creating po/makefile.in
+config.status: creating lynx_cfg.h
+config.status: creating po/POTFILES
+config.status: creating po/makefile
+creating po/makefile
+make[1]: Leaving directory '/dev/shm/builddeps/lynx/lynx'
+   dh_auto_build
+	make -j8
+make[1]: Entering directory '/dev/shm/builddeps/lynx/lynx'
+Constructing sed-script help_files.sed
+/bin/bash -c 'SHELL=/bin/bash /bin/bash ./scripts/cfg_defs.sh .'
+echo 's!''https://lynx.invisible-island.net/release/breakout'/lynx_help/'alphatoc.html!alphatoc.html!g' >> help_files.tmp
+echo 's!''https://lynx.invisible-island.net/release/breakout'/lynx_help/'cattoc.html!cattoc.html!g' >> help_files.tmp
+echo 's!alphatoc\.html!alphatoc.html.gz!g' >> help_files.tmp
+echo 's!cattoc\.html!cattoc.html.gz!g' >> help_files.tmp
+echo 's!body\.html!body.html.gz!g' >> help_files.tmp
+sed	-e '/^#/d' -e '/^$/d' \
+	-e 's%\(.*\)=\(.*\@.*\)$%s=@\1@=\2=g%' \
+	-e 's%\(.*\)=\(http:.*\)$%s=@\1@=\2=g%' \
+	-e 's%\(.*\)=\(ftp:.*\)$%s=@\1@=\2=g%' \
+	-e 's%\(.*\)=\(.*\.html\)$%s=@\1@=\2.gz=g%' \
+	help_files.tmp | tr '=' '"' > help_files.sed
+Appending interim-fix for existing html files to help_files.sed
+sed	-e '/^#/d' -e '/[:@]/d' -e '/^$/d' \
+	-e 's%\(.*\)=\(.*\.html\)$%s=\2=\2.gz=g%' \
+	-e 's%\.html=%\\.html=%' \
+	help_files.tmp | tr '=' '"' >> help_files.sed
+if test -n ".gz"; then echo "s%\\(\.gz\\)*\.gz%.gz%g" >> help_files.sed; fi
+Creating LYHelp.h
+**********************************************
+
+       Help links point to compressed files
+       To access them properly you have to type
+                 make install-help
+
+**********************************************
+/bin/bash ./scripts/fixtext.sh ./LYMessages_en.h >LYMessages.c
+cd ./po && make -w -j8 --jobserver-auth=3,4 DESTDIR="" CC="icc"
+make[2]: Entering directory '/dev/shm/builddeps/lynx/lynx/po'
+make[2]: warning: -j8 forced in submake: resetting jobserver mode.
+translating ca.po to ca.gmo
+translating cs.po to cs.gmo
+translating da.po to da.gmo
+translating eo.po to eo.gmo
+translating de.po to de.gmo
+translating et.po to et.gmo
+translating fi.po to fi.gmo
+translating fr.po to fr.gmo
+...no change made to homepage URL
+...no change made to homepage URL
+...updated homepage URL
+...updated homepage URL
+...no change made to homepage URL
+...no change made to homepage URL
+...no change made to homepage URL
+...no change made to homepage URL
+.......................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................... done.
+............................................................. done.
+....... done.
+................................................................................................................................................................................................................................................................ done.
+.... done.
+.................................................................................................................................................... done.
+.................. done.
+.. done.
+...merged against ./lynx.pot
+rm -f da.gmo && PATH=../src:$PATH /usr/bin/msgfmt -o da.gmo pass2-da.tmp
+...merged against ./lynx.pot
+rm -f ca.gmo && PATH=../src:$PATH /usr/bin/msgfmt -o ca.gmo pass2-ca.tmp
+...merged against ./lynx.pot
+rm -f eo.gmo && PATH=../src:$PATH /usr/bin/msgfmt -o eo.gmo pass2-eo.tmp
+...merged against ./lynx.pot
+rm -f fi.gmo && PATH=../src:$PATH /usr/bin/msgfmt -o fi.gmo pass2-fi.tmp
+...merged against ./lynx.pot
+rm -f de.gmo && PATH=../src:$PATH /usr/bin/msgfmt -o de.gmo pass2-de.tmp
+...merged against ./lynx.pot
+rm -f et.gmo && PATH=../src:$PATH /usr/bin/msgfmt -o et.gmo pass2-et.tmp
+translating hu.po to hu.gmo
+...merged against ./lynx.pot
+rm -f fr.gmo && PATH=../src:$PATH /usr/bin/msgfmt -o fr.gmo pass2-fr.tmp
+...updated homepage URL
+...merged against ./lynx.pot
+rm -f cs.gmo && PATH=../src:$PATH /usr/bin/msgfmt -o cs.gmo pass2-cs.tmp
+translating id.po to id.gmo
+translating it.po to it.gmo
+translating ja.po to ja.gmo
+translating nl.po to nl.gmo
+...updated homepage URL
+...updated homepage URL
+...updated homepage URL
+...no change made to homepage URL
+translating pt_BR.po to pt_BR.gmo
+translating ru.po to ru.gmo
+...updated homepage URL
+...updated homepage URL
+translating sl.po to sl.gmo
+...updated homepage URL
+................................................................................................................................................................................................................................................................................................................................................................................................................................................ done.
+...................... done.
+.................................................................................................................................................................................. done.
+..................................................................................................................................................................................................................................................................................................................................................................................................................................................... done.
+........................................................................................................................................... done.
+.........................merged against ./lynx.pot
+rm -f hu.gmo && PATH=../src:$PATH /usr/bin/msgfmt -o hu.gmo pass2-hu.tmp
+............ done.
+ done.
+........................... done.
+...merged against ./lynx.pot
+rm -f id.gmo && PATH=../src:$PATH /usr/bin/msgfmt -o id.gmo pass2-id.tmp
+...merged against ./lynx.pot
+rm -f it.gmo && PATH=../src:$PATH /usr/bin/msgfmt -o it.gmo pass2-it.tmp
+...merged against ./lynx.pot
+rm -f nl.gmo && PATH=../src:$PATH /usr/bin/msgfmt -o nl.gmo pass2-nl.tmp
+...merged against ./lynx.pot
+rm -f ru.gmo && PATH=../src:$PATH /usr/bin/msgfmt -o ru.gmo pass2-ru.tmp
+...merged against ./lynx.pot
+rm -f pt_BR.gmo && PATH=../src:$PATH /usr/bin/msgfmt -o pt_BR.gmo pass2-pt_BR.tmp
+...merged against ./lynx.pot
+rm -f sl.gmo && PATH=../src:$PATH /usr/bin/msgfmt -o sl.gmo pass2-sl.tmp
+translating sv.po to sv.gmo
+...updated homepage URL
+...merged against ./lynx.pot
+rm -f ja.gmo && PATH=../src:$PATH /usr/bin/msgfmt -o ja.gmo pass2-ja.tmp
+translating tr.po to tr.gmo
+translating uk.po to uk.gmo
+translating vi.po to vi.gmo
+...no change made to homepage URL
+...updated homepage URL
+translating zh_CN.po to zh_CN.gmo
+...no change made to homepage URL
+...updated homepage URL
+translating zh_TW.po to zh_TW.gmo
+msginit --no-translator -l en -i lynx.pot
+...updated homepage URL
+................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................. done.
+....................................................................................... done.
+..................... done.
+......................................................... done.
+..................................................................................................................................................................................... done.
+....Created en.po.
+ done.
+...merged against ./lynx.pot
+rm -f sv.gmo && PATH=../src:$PATH /usr/bin/msgfmt -o sv.gmo pass2-sv.tmp
+...merged against ./lynx.pot
+rm -f zh_CN.gmo && PATH=../src:$PATH /usr/bin/msgfmt -o zh_CN.gmo pass2-zh_CN.tmp
+...merged against ./lynx.pot
+rm -f uk.gmo && PATH=../src:$PATH /usr/bin/msgfmt -o uk.gmo pass2-uk.tmp
+translating en.po to en.gmo
+...merged against ./lynx.pot
+...merged against ./lynx.pot
+rm -f vi.gmo && PATH=../src:$PATH /usr/bin/msgfmt -o vi.gmo pass2-vi.tmp
+rm -f zh_TW.gmo && PATH=../src:$PATH /usr/bin/msgfmt -o zh_TW.gmo pass2-zh_TW.tmp
+...merged against ./lynx.pot
+rm -f tr.gmo && PATH=../src:$PATH /usr/bin/msgfmt -o tr.gmo pass2-tr.tmp
+...no change made to homepage URL
+..................................................................................................................................... done.
+...merged against ./lynx.pot
+rm -f en.gmo && PATH=../src:$PATH /usr/bin/msgfmt -o en.gmo pass2-en.tmp
+make[2]: Leaving directory '/dev/shm/builddeps/lynx/lynx/po'
+cd ./WWW/Library/Implementation && make -w -j8 --jobserver-auth=3,4 DESTDIR="" CC="icc" LY_CFLAGS="-g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP " CPPFLAGS="-Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600" LYFLAGS=""
+make[2]: Entering directory '/dev/shm/builddeps/lynx/lynx/WWW/Library/Implementation'
+make[2]: warning: -j8 forced in submake: resetting jobserver mode.
+icc -DHAVE_CONFIG_H  -I../../.. -I../../../src -I../../.. -I../../../src  -I../../../WWW/Library/Implementation  -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP    -I../../../WWW/Library/Implementation/ -DACCESS_AUTH -c ../../../WWW/Library/Implementation/HTParse.c
+icc -DHAVE_CONFIG_H  -I../../.. -I../../../src -I../../.. -I../../../src  -I../../../WWW/Library/Implementation  -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP    -I../../../WWW/Library/Implementation/ -DACCESS_AUTH -c ../../../WWW/Library/Implementation/HTAccess.c
+icc -DHAVE_CONFIG_H  -I../../.. -I../../../src -I../../.. -I../../../src  -I../../../WWW/Library/Implementation  -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP    -I../../../WWW/Library/Implementation/ -DACCESS_AUTH -c ../../../WWW/Library/Implementation/HTTP.c
+icc -DHAVE_CONFIG_H  -I../../.. -I../../../src -I../../.. -I../../../src  -I../../../WWW/Library/Implementation  -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP    -I../../../WWW/Library/Implementation/ -DACCESS_AUTH -c ../../../WWW/Library/Implementation/HTFile.c
+icc -DHAVE_CONFIG_H  -I../../.. -I../../../src -I../../.. -I../../../src  -I../../../WWW/Library/Implementation  -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP    -I../../../WWW/Library/Implementation/ -DACCESS_AUTH -c ../../../WWW/Library/Implementation/HTBTree.c
+icc -DHAVE_CONFIG_H  -I../../.. -I../../../src -I../../.. -I../../../src  -I../../../WWW/Library/Implementation  -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP    -I../../../WWW/Library/Implementation/ -DACCESS_AUTH -c ../../../WWW/Library/Implementation/HTFTP.c
+icc -DHAVE_CONFIG_H  -I../../.. -I../../../src -I../../.. -I../../../src  -I../../../WWW/Library/Implementation  -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP    -I../../../WWW/Library/Implementation/ -DACCESS_AUTH -c ../../../WWW/Library/Implementation/HTTCP.c
+icc -DHAVE_CONFIG_H  -I../../.. -I../../../src -I../../.. -I../../../src  -I../../../WWW/Library/Implementation  -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP    -I../../../WWW/Library/Implementation/ -DACCESS_AUTH -c ../../../WWW/Library/Implementation/SGML.c
+icc -DHAVE_CONFIG_H  -I../../.. -I../../../src -I../../.. -I../../../src  -I../../../WWW/Library/Implementation  -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP    -I../../../WWW/Library/Implementation/ -DACCESS_AUTH -c ../../../WWW/Library/Implementation/HTMLDTD.c
+../../../WWW/Library/Implementation/HTTP.c(337): warning #266: function "arc4random" declared implicitly
+  	    l = lynx_rand();
+  	        ^
+
+icc -DHAVE_CONFIG_H  -I../../.. -I../../../src -I../../.. -I../../../src  -I../../../WWW/Library/Implementation  -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP    -I../../../WWW/Library/Implementation/ -DACCESS_AUTH -c ../../../WWW/Library/Implementation/HTChunk.c
+icc -DHAVE_CONFIG_H  -I../../.. -I../../../src -I../../.. -I../../../src  -I../../../WWW/Library/Implementation  -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP    -I../../../WWW/Library/Implementation/ -DACCESS_AUTH -c ../../../WWW/Library/Implementation/HTPlain.c
+icc -DHAVE_CONFIG_H  -I../../.. -I../../../src -I../../.. -I../../../src  -I../../../WWW/Library/Implementation  -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP    -I../../../WWW/Library/Implementation/ -DACCESS_AUTH -c ../../../WWW/Library/Implementation/HTMLGen.c
+icc -DHAVE_CONFIG_H  -I../../.. -I../../../src -I../../.. -I../../../src  -I../../../WWW/Library/Implementation  -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP    -I../../../WWW/Library/Implementation/ -DACCESS_AUTH -c ../../../WWW/Library/Implementation/HTAtom.c
+icc -DHAVE_CONFIG_H  -I../../.. -I../../../src -I../../.. -I../../../src  -I../../../WWW/Library/Implementation  -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP    -I../../../WWW/Library/Implementation/ -DACCESS_AUTH -c ../../../WWW/Library/Implementation/HTAnchor.c
+icc -DHAVE_CONFIG_H  -I../../.. -I../../../src -I../../.. -I../../../src  -I../../../WWW/Library/Implementation  -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP    -I../../../WWW/Library/Implementation/ -DACCESS_AUTH -c ../../../WWW/Library/Implementation/HTStyle.c
+icc -DHAVE_CONFIG_H  -I../../.. -I../../../src -I../../.. -I../../../src  -I../../../WWW/Library/Implementation  -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP    -I../../../WWW/Library/Implementation/ -DACCESS_AUTH -c ../../../WWW/Library/Implementation/HTList.c
+icc -DHAVE_CONFIG_H  -I../../.. -I../../../src -I../../.. -I../../../src  -I../../../WWW/Library/Implementation  -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP    -I../../../WWW/Library/Implementation/ -DACCESS_AUTH -c -DVC=\"2.14\" ../../../WWW/Library/Implementation/HTString.c
+icc -DHAVE_CONFIG_H  -I../../.. -I../../../src -I../../.. -I../../../src  -I../../../WWW/Library/Implementation  -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP    -I../../../WWW/Library/Implementation/ -DACCESS_AUTH -c -DVC=\"2.14\" ../../../WWW/Library/Implementation/HTRules.c
+icc -DHAVE_CONFIG_H  -I../../.. -I../../../src -I../../.. -I../../../src  -I../../../WWW/Library/Implementation  -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP    -I../../../WWW/Library/Implementation/ -DACCESS_AUTH -c ../../../WWW/Library/Implementation/HTFormat.c
+icc -DHAVE_CONFIG_H  -I../../.. -I../../../src -I../../.. -I../../../src  -I../../../WWW/Library/Implementation  -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP    -I../../../WWW/Library/Implementation/ -DACCESS_AUTH -c ../../../WWW/Library/Implementation/HTMIME.c
+icc -DHAVE_CONFIG_H  -I../../.. -I../../../src -I../../.. -I../../../src  -I../../../WWW/Library/Implementation  -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP    -I../../../WWW/Library/Implementation/ -DACCESS_AUTH -c ../../../WWW/Library/Implementation/HTNews.c
+icc -DHAVE_CONFIG_H  -I../../.. -I../../../src -I../../.. -I../../../src  -I../../../WWW/Library/Implementation  -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP    -I../../../WWW/Library/Implementation/ -DACCESS_AUTH -c ../../../WWW/Library/Implementation/HTGopher.c
+icc -DHAVE_CONFIG_H  -I../../.. -I../../../src -I../../.. -I../../../src  -I../../../WWW/Library/Implementation  -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP    -I../../../WWW/Library/Implementation/ -DACCESS_AUTH -c ../../../WWW/Library/Implementation/HTTelnet.c
+icc -DHAVE_CONFIG_H  -I../../.. -I../../../src -I../../.. -I../../../src  -I../../../WWW/Library/Implementation  -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP    -I../../../WWW/Library/Implementation/ -DACCESS_AUTH -c ../../../WWW/Library/Implementation/HTFinger.c
+icc -DHAVE_CONFIG_H  -I../../.. -I../../../src -I../../.. -I../../../src  -I../../../WWW/Library/Implementation  -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP    -I../../../WWW/Library/Implementation/ -DACCESS_AUTH -c ../../../WWW/Library/Implementation/HTWSRC.c
+icc -DHAVE_CONFIG_H  -I../../.. -I../../../src -I../../.. -I../../../src  -I../../../WWW/Library/Implementation  -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP    -I../../../WWW/Library/Implementation/ -DACCESS_AUTH -c ../../../WWW/Library/Implementation/HTAAUtil.c
+icc -DHAVE_CONFIG_H  -I../../.. -I../../../src -I../../.. -I../../../src  -I../../../WWW/Library/Implementation  -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP    -I../../../WWW/Library/Implementation/ -DACCESS_AUTH -c ../../../WWW/Library/Implementation/HTAABrow.c
+icc -DHAVE_CONFIG_H  -I../../.. -I../../../src -I../../.. -I../../../src  -I../../../WWW/Library/Implementation  -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP    -I../../../WWW/Library/Implementation/ -DACCESS_AUTH -c ../../../WWW/Library/Implementation/HTGroup.c
+icc -DHAVE_CONFIG_H  -I../../.. -I../../../src -I../../.. -I../../../src  -I../../../WWW/Library/Implementation  -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP    -I../../../WWW/Library/Implementation/ -DACCESS_AUTH -c ../../../WWW/Library/Implementation/HTAAProt.c
+icc -DHAVE_CONFIG_H  -I../../.. -I../../../src -I../../.. -I../../../src  -I../../../WWW/Library/Implementation  -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP    -I../../../WWW/Library/Implementation/ -DACCESS_AUTH -c ../../../WWW/Library/Implementation/HTAssoc.c
+icc -DHAVE_CONFIG_H  -I../../.. -I../../../src -I../../.. -I../../../src  -I../../../WWW/Library/Implementation  -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP    -I../../../WWW/Library/Implementation/ -DACCESS_AUTH -c ../../../WWW/Library/Implementation/HTLex.c
+icc -DHAVE_CONFIG_H  -I../../.. -I../../../src -I../../.. -I../../../src  -I../../../WWW/Library/Implementation  -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP    -I../../../WWW/Library/Implementation/ -DACCESS_AUTH -c ../../../WWW/Library/Implementation/HTUU.c
+icc -DHAVE_CONFIG_H  -I../../.. -I../../../src -I../../.. -I../../../src  -I../../../WWW/Library/Implementation  -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP    -I../../../WWW/Library/Implementation/ -DACCESS_AUTH -c ../../../WWW/Library/Implementation/HTDOS.c
+xiar -curvU ./libwww.a ./HTParse.o ./HTAccess.o ./HTTP.o ./HTFile.o	./HTBTree.o ./HTFTP.o ./HTTCP.o ./SGML.o ./HTMLDTD.o ./HTChunk.o ./HTPlain.o ./HTMLGen.o ./HTAtom.o ./HTAnchor.o ./HTStyle.o ./HTList.o ./HTString.o ./HTRules.o ./HTFormat.o  ./HTMIME.o ./HTNews.o  ./HTGopher.o ./HTTelnet.o ./HTFinger.o ./HTWSRC.o  ./HTAAUtil.o ./HTAABrow.o ./HTGroup.o ./HTAAProt.o ./HTAssoc.o  ./HTLex.o    ./HTUU.o ./HTDOS.o
+xiar: executing 'ar'
+a - /tmp/xiar_ipo3Ar9Ul/HTParse.o
+a - /tmp/xiar_ipoXf9B4h/HTAccess.o
+a - /tmp/xiar_ipovFw1Ro/HTTP.o
+a - /tmp/xiar_ipoLhZyCJ/HTFile.o
+a - /tmp/xiar_ipozNP3Iu/HTBTree.o
+a - /tmp/xiar_ipo3e1gsu/HTFTP.o
+a - /tmp/xiar_ipoxycuHC/HTTCP.o
+a - /tmp/xiar_ipoN8Fbi7/SGML.o
+a - /tmp/xiar_ipoJwk5WX/HTMLDTD.o
+a - /tmp/xiar_ipopu1ZYv/HTChunk.o
+a - /tmp/xiar_ipo1ViWW5/HTPlain.o
+a - /tmp/xiar_ipot0i30J/HTMLGen.o
+a - /tmp/xiar_ipo9xeaix/HTAtom.o
+a - /tmp/xiar_ipoRgz7Ns/HTAnchor.o
+a - /tmp/xiar_ipozXkJDr/HTStyle.o
+a - /tmp/xiar_iponDqoqy/HTList.o
+a - /tmp/xiar_ipo3IPnCG/HTString.o
+a - /tmp/xiar_ipolsvtWS/HTRules.o
+a - /tmp/xiar_ipofHtGUd/HTFormat.o
+a - /tmp/xiar_ipop8VlmE/HTMIME.o
+a - /tmp/xiar_ipoHd1JEg/HTNews.o
+a - /tmp/xiar_ipofxj47h/HTGopher.o
+a - /tmp/xiar_ipoLb3IEN/HTTelnet.o
+a - /tmp/xiar_ipoFwCKsv/HTFinger.o
+a - /tmp/xiar_ipoBQgHof/HTWSRC.o
+a - /tmp/xiar_ipoPfR9A2/HTAAUtil.o
+a - /tmp/xiar_ipon5Fr9S/HTAABrow.o
+a - /tmp/xiar_ipopGzEwN/HTGroup.o
+a - /tmp/xiar_ipoDtujKN/HTAAProt.o
+a - /tmp/xiar_ipozxoqRQ/HTAssoc.o
+a - /tmp/xiar_ipo7KtAjX/HTLex.o
+a - /tmp/xiar_ipoV6maF4/HTUU.o
+a - /tmp/xiar_ipoLLdSUc/HTDOS.o
+/usr/bin/x86_64-linux-gnu-ranlib ./libwww.a
+make[2]: Leaving directory '/dev/shm/builddeps/lynx/lynx/WWW/Library/Implementation'
+cd ./src/chrtrans && make -w -j8 --jobserver-auth=3,4 DESTDIR="" CC="icc" all SITE_DEFS="" BUILD_CFLAGS="-g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP " BUILD_CPPFLAGS="-Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -DHAVE_CONFIG_H" BUILD_LDFLAGS="-Wl,-z,relro -Wl,-z,now -Wl,--as-needed,--gc-sections,--relax" BUILD_LIBS="-lz -lbz2 -lidn -lncursesw -ltinfo -lgnutls -lbsd" BUILD_CC="icc"
+make[2]: Entering directory '/dev/shm/builddeps/lynx/lynx/src/chrtrans'
+make[2]: warning: -j8 forced in submake: resetting jobserver mode.
+icc -I../.. -I../../src -I../../src/chrtrans -I../../WWW/Library/Implementation -I../../  -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -DHAVE_CONFIG_H -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP  -c ./makeuctb.c
+icc -I../.. -I../../src -I../../src/chrtrans -I../../WWW/Library/Implementation -I../../  -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -DHAVE_CONFIG_H -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP  -Wl,-z,relro -Wl,-z,now -Wl,--as-needed,--gc-sections,--relax -o makeuctb makeuctb.o -lz -lbz2 -lidn -lncursesw -ltinfo -lgnutls -lbsd
+./makeuctb ./cp1250_uni.tbl cp1250_uni.h
+./makeuctb ./cp1251_uni.tbl cp1251_uni.h
+./makeuctb ./cp1252_uni.tbl cp1252_uni.h
+./makeuctb ./cp1253_uni.tbl cp1253_uni.h
+./makeuctb ./cp1255_uni.tbl cp1255_uni.h
+./makeuctb ./cp1256_uni.tbl cp1256_uni.h
+./makeuctb ./cp1257_uni.tbl cp1257_uni.h
+./makeuctb ./cp437_uni.tbl cp437_uni.h
+makeuctb: windows-1250: translation map (_windows_1250).
+makeuctb: windows-1251: translation map (_windows_1251).
+makeuctb: windows-1252: translation mapmakeuctb: windows-1253: translation map (_windows_1253).
+ (_windows_1252).
+./makeuctb ./cp737_uni.tbl cp737_uni.h
+./makeuctb ./cp775_uni.tbl cp775_uni.h
+makeuctb: windows-1255: translation map (_windows_1255).
+./makeuctb ./cp850_uni.tbl cp850_uni.h
+makeuctb: windows-1257: translation map./makeuctb ./cp852_uni.tbl cp852_uni.h
+ (_windows_1257).
+./makeuctb ./cp857_uni.tbl cp857_uni.h
+makeuctb: windows-1256: translation map (_windows_1256).
+./makeuctb ./cp862_uni.tbl cp862_uni.h
+./makeuctb ./cp864_uni.tbl cp864_uni.h
+makeuctb: cp437: translation map (_cp437).
+makeuctb: cp775: translation map (_cp775).
+makeuctb: cp737: translation map (_cp737).
+./makeuctb ./cp866_uni.tbl cp866_uni.h
+makeuctb: cp850: translation mapmakeuctb: cp852: translation map./makeuctb ./cp866u_uni.tbl cp866u_uni.h
+ (_cp850).
+ (_cp852).
+./makeuctb ./cp869_uni.tbl cp869_uni.h
+./makeuctb ./def7_uni.tbl def7_uni.h
+makeuctb: cp862: translation map (_cp862).
+./makeuctb ./dmcs_uni.tbl dmcs_uni.h
+makeuctb: cp857: translation map (_cp857).
+makeuctb: cp866: translation map (_cp866).
+./makeuctb ./hp_uni.tbl hp_uni.h
+makeuctb: cp866u: translation map (_cp866u).
+./makeuctb ./iso01_uni.tbl iso01_uni.h
+makeuctb: cp869: translation map (_cp869).
+./makeuctb ./iso02_uni.tbl iso02_uni.h
+./makeuctb ./iso03_uni.tbl iso03_uni.h
+makeuctb: cp864: translation map (_cp864).
+./makeuctb ./iso04_uni.tbl iso04_uni.h
+./makeuctb ./iso05_uni.tbl iso05_uni.h
+makeuctb: dec-mcs: translation map (_dec_mcs).
+makeuctb: iso-8859-2: translation map (_iso_8859_2).
+makeuctb: hp-roman8: translation map (_hp_roman8).
+./makeuctb ./iso06_uni.tbl iso06_uni.h
+makeuctb: iso-8859-1: translation map (_iso_8859_1).
+./makeuctb ./iso07_uni.tbl iso07_uni.h
+./makeuctb ./iso08_uni.tbl iso08_uni.h
+./makeuctb ./iso09_uni.tbl iso09_uni.h
+makeuctb: iso-8859-3: translation mapmakeuctb: us-ascii: default translation map ().
+ (_iso_8859_3).
+./makeuctb ./iso10_uni.tbl iso10_uni.h
+makeuctb: iso-8859-4: translation map (_iso_8859_4).
+./makeuctb ./iso13_uni.tbl iso13_uni.h
+./makeuctb ./iso14_uni.tbl iso14_uni.h
+makeuctb: iso-8859-5: translation map (_iso_8859_5).
+./makeuctb ./iso15_uni.tbl iso15_uni.h
+makeuctb: iso-8859-7: translation map (_iso_8859_7).
+makeuctb: iso-8859-6: translation map (_iso_8859_6).
+./makeuctb ./koi8r_uni.tbl koi8r_uni.h
+makeuctb: iso-8859-9: translation map (_iso_8859_9).
+makeuctb: iso-8859-8: translation map (_iso_8859_8).
+./makeuctb ./koi8u_uni.tbl koi8u_uni.h
+./makeuctb ./mac_uni.tbl mac_uni.h
+makeuctb: iso-8859-10: translation map (_iso_8859_10).
+./makeuctb ./mnem2_suni.tbl mnem2_suni.h
+./makeuctb ./mnem_suni.tbl mnem_suni.h
+makeuctb: iso-8859-13: translation map (_iso_8859_13).
+makeuctb: iso-8859-14: translation map (_iso_8859_14).
+./makeuctb ./next_uni.tbl next_uni.h
+./makeuctb ./pt154_uni.tbl pt154_uni.h
+makeuctb: iso-8859-15: translation map (_iso_8859_15).
+./makeuctb ./rfc_suni.tbl rfc_suni.h
+makeuctb: koi8-r: translation map (_koi8_r).
+./makeuctb ./utf8_uni.tbl utf8_uni.h
+makeuctb: macintosh: translation map (_macintosh).
+makeuctb: koi8-u: translation map (_koi8_u).
+./makeuctb ./viscii_uni.tbl viscii_uni.h
+makeuctb: next: translation map (_next).
+makeuctb: mnemonic: translation map (_mnemonic).
+makeuctb: ptcp154: translation map (_ptcp154).
+makeuctb: utf-8: translation map (_utf_8).
+makeuctb: viscii: translation map (_viscii).
+makeuctb: mnem: translation map (_mnem).
+makeuctb: mnemonic+ascii+0: translation map (_mnemonic_ascii_0).
+make[2]: Leaving directory '/dev/shm/builddeps/lynx/lynx/src/chrtrans'
+cd ./src && make -w -j8 --jobserver-auth=3,4 DESTDIR="" CC="icc" all CFLAGS="-g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP " CPPFLAGS="-Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600" LDFLAGS="-Wl,-z,relro -Wl,-z,now -Wl,--as-needed,--gc-sections,--relax" LIBS="-lz -lbz2 -lidn -lncursesw -ltinfo -lgnutls -lbsd   " SITE_DEFS="" WWWINC=./WWW/Library/Implementation WWWLIB=".././WWW/Library/Implementation/libwww.a"
+make[2]: Entering directory '/dev/shm/builddeps/lynx/lynx/src'
+make[2]: warning: -j8 forced in submake: resetting jobserver mode.
+icc -DHAVE_CONFIG_H  -DLOCALEDIR=\"/usr/share/locale\" -I. -I.. -Ichrtrans -I./chrtrans -I.. -I../src -I.././WWW/Library/Implementation    -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP  -c LYebcdic.c
+icc -DHAVE_CONFIG_H  -DLOCALEDIR=\"/usr/share/locale\" -I. -I.. -Ichrtrans -I./chrtrans -I.. -I../src -I.././WWW/Library/Implementation    -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP  -c LYClean.c
+icc -DHAVE_CONFIG_H  -DLOCALEDIR=\"/usr/share/locale\" -I. -I.. -Ichrtrans -I./chrtrans -I.. -I../src -I.././WWW/Library/Implementation    -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP  -c LYShowInfo.c
+icc -DHAVE_CONFIG_H  -DLOCALEDIR=\"/usr/share/locale\" -I. -I.. -Ichrtrans -I./chrtrans -I.. -I../src -I.././WWW/Library/Implementation    -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP  -c LYEdit.c
+icc -DHAVE_CONFIG_H  -DLOCALEDIR=\"/usr/share/locale\" -I. -I.. -Ichrtrans -I./chrtrans -I.. -I../src -I.././WWW/Library/Implementation    -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP  -c LYStrings.c
+Compiling Lynx sources
+icc -DHAVE_CONFIG_H  -DLOCALEDIR=\"/usr/share/locale\" -I. -I.. -Ichrtrans -I./chrtrans -I.. -I../src -I.././WWW/Library/Implementation    -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP  -c LYMail.c
+icc -DHAVE_CONFIG_H  -DLOCALEDIR=\"/usr/share/locale\" -I. -I.. -Ichrtrans -I./chrtrans -I.. -I../src -I.././WWW/Library/Implementation    -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP  -c HTAlert.c
+icc -DHAVE_CONFIG_H  -DLOCALEDIR=\"/usr/share/locale\" -I. -I.. -Ichrtrans -I./chrtrans -I.. -I../src -I.././WWW/Library/Implementation    -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP  -c GridText.c
+icc -DHAVE_CONFIG_H  -DLOCALEDIR=\"/usr/share/locale\" -I. -I.. -Ichrtrans -I./chrtrans -I.. -I../src -I.././WWW/Library/Implementation    -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP  -c LYGetFile.c
+icc -DHAVE_CONFIG_H  -DLOCALEDIR=\"/usr/share/locale\" -I. -I.. -Ichrtrans -I./chrtrans -I.. -I../src -I.././WWW/Library/Implementation    -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP  -c LYMain.c
+icc -DHAVE_CONFIG_H  -DLOCALEDIR=\"/usr/share/locale\" -I. -I.. -Ichrtrans -I./chrtrans -I.. -I../src -I.././WWW/Library/Implementation    -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP  -c LYMainLoop.c
+icc -DHAVE_CONFIG_H  -DLOCALEDIR=\"/usr/share/locale\" -I. -I.. -Ichrtrans -I./chrtrans -I.. -I../src -I.././WWW/Library/Implementation    -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP  -c LYCurses.c
+icc -DHAVE_CONFIG_H  -DLOCALEDIR=\"/usr/share/locale\" -I. -I.. -Ichrtrans -I./chrtrans -I.. -I../src -I.././WWW/Library/Implementation    -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP  -c LYBookmark.c
+icc -DHAVE_CONFIG_H  -DLOCALEDIR=\"/usr/share/locale\" -I. -I.. -Ichrtrans -I./chrtrans -I.. -I../src -I.././WWW/Library/Implementation    -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP  -c LYmktime.c
+icc -DHAVE_CONFIG_H  -DLOCALEDIR=\"/usr/share/locale\" -I. -I.. -Ichrtrans -I./chrtrans -I.. -I../src -I.././WWW/Library/Implementation    -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP  -c LYUtils.c
+icc -DHAVE_CONFIG_H  -DLOCALEDIR=\"/usr/share/locale\" -I. -I.. -Ichrtrans -I./chrtrans -I.. -I../src -I.././WWW/Library/Implementation    -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP  -c LYOptions.c
+icc -DHAVE_CONFIG_H  -DLOCALEDIR=\"/usr/share/locale\" -I. -I.. -Ichrtrans -I./chrtrans -I.. -I../src -I.././WWW/Library/Implementation    -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP  -c LYReadCFG.c
+icc -DHAVE_CONFIG_H  -DLOCALEDIR=\"/usr/share/locale\" -I. -I.. -Ichrtrans -I./chrtrans -I.. -I../src -I.././WWW/Library/Implementation    -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP  -c LYSearch.c
+icc -DHAVE_CONFIG_H  -DLOCALEDIR=\"/usr/share/locale\" -I. -I.. -Ichrtrans -I./chrtrans -I.. -I../src -I.././WWW/Library/Implementation    -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP  -c LYHistory.c
+icc -DHAVE_CONFIG_H  -DLOCALEDIR=\"/usr/share/locale\" -I. -I.. -Ichrtrans -I./chrtrans -I.. -I../src -I.././WWW/Library/Implementation    -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP  -c LYForms.c
+LYUtils.c(3548): warning #266: function "arc4random" declared implicitly
+  	long get_rand = lynx_rand();
+  	                ^
+
+icc -DHAVE_CONFIG_H  -DLOCALEDIR=\"/usr/share/locale\" -I. -I.. -Ichrtrans -I./chrtrans -I.. -I../src -I.././WWW/Library/Implementation    -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP  -c LYPrint.c
+LYOptions.c(3554): warning #266: function "arc4random" declared implicitly
+  	long key = lynx_rand();
+  	           ^
+
+icc -DHAVE_CONFIG_H  -DLOCALEDIR=\"/usr/share/locale\" -I. -I.. -Ichrtrans -I./chrtrans -I.. -I../src -I.././WWW/Library/Implementation    -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP  -c LYrcFile.c
+icc -DHAVE_CONFIG_H  -DLOCALEDIR=\"/usr/share/locale\" -I. -I.. -Ichrtrans -I./chrtrans -I.. -I../src -I.././WWW/Library/Implementation    -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP  -c LYDownload.c
+icc -DHAVE_CONFIG_H  -DLOCALEDIR=\"/usr/share/locale\" -I. -I.. -Ichrtrans -I./chrtrans -I.. -I../src -I.././WWW/Library/Implementation    -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP  -c LYNews.c
+icc -DHAVE_CONFIG_H  -DLOCALEDIR=\"/usr/share/locale\" -I. -I.. -Ichrtrans -I./chrtrans -I.. -I../src -I.././WWW/Library/Implementation    -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP  -c LYKeymap.c
+icc -DHAVE_CONFIG_H  -DLOCALEDIR=\"/usr/share/locale\" -I. -I.. -Ichrtrans -I./chrtrans -I.. -I../src -I.././WWW/Library/Implementation    -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP  -c HTML.c
+icc -DHAVE_CONFIG_H  -DLOCALEDIR=\"/usr/share/locale\" -I. -I.. -Ichrtrans -I./chrtrans -I.. -I../src -I.././WWW/Library/Implementation    -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP  -c HTFWriter.c
+icc -DHAVE_CONFIG_H  -DLOCALEDIR=\"/usr/share/locale\" -I. -I.. -Ichrtrans -I./chrtrans -I.. -I../src -I.././WWW/Library/Implementation    -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP  -c HTInit.c
+icc -DHAVE_CONFIG_H  -DLOCALEDIR=\"/usr/share/locale\" -I. -I.. -Ichrtrans -I./chrtrans -I.. -I../src -I.././WWW/Library/Implementation    -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP  -c DefaultStyle.c
+icc -DHAVE_CONFIG_H  -DLOCALEDIR=\"/usr/share/locale\" -I. -I.. -Ichrtrans -I./chrtrans -I.. -I../src -I.././WWW/Library/Implementation    -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP  -c LYUpload.c
+icc -DHAVE_CONFIG_H  -DLOCALEDIR=\"/usr/share/locale\" -I. -I.. -Ichrtrans -I./chrtrans -I.. -I../src -I.././WWW/Library/Implementation    -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP  -c LYLeaks.c
+icc -DHAVE_CONFIG_H  -DLOCALEDIR=\"/usr/share/locale\" -I. -I.. -Ichrtrans -I./chrtrans -I.. -I../src -I.././WWW/Library/Implementation    -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP  -c LYexit.c
+icc -DHAVE_CONFIG_H  -DLOCALEDIR=\"/usr/share/locale\" -I. -I.. -Ichrtrans -I./chrtrans -I.. -I../src -I.././WWW/Library/Implementation    -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP  -c LYJump.c
+icc -DHAVE_CONFIG_H  -DLOCALEDIR=\"/usr/share/locale\" -I. -I.. -Ichrtrans -I./chrtrans -I.. -I../src -I.././WWW/Library/Implementation    -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP  -c LYList.c
+icc -DHAVE_CONFIG_H  -DLOCALEDIR=\"/usr/share/locale\" -I. -I.. -Ichrtrans -I./chrtrans -I.. -I../src -I.././WWW/Library/Implementation    -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP  -c LYCgi.c
+icc -DHAVE_CONFIG_H  -DLOCALEDIR=\"/usr/share/locale\" -I. -I.. -Ichrtrans -I./chrtrans -I.. -I../src -I.././WWW/Library/Implementation    -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP  -c LYTraversal.c
+icc -DHAVE_CONFIG_H  -DLOCALEDIR=\"/usr/share/locale\" -I. -I.. -Ichrtrans -I./chrtrans -I.. -I../src -I.././WWW/Library/Implementation    -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP  -c LYEditmap.c
+icc -DHAVE_CONFIG_H  -DLOCALEDIR=\"/usr/share/locale\" -I. -I.. -Ichrtrans -I./chrtrans -I.. -I../src -I.././WWW/Library/Implementation    -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP  -c LYCharSets.c
+icc -DHAVE_CONFIG_H  -DLOCALEDIR=\"/usr/share/locale\" -I. -I.. -Ichrtrans -I./chrtrans -I.. -I../src -I.././WWW/Library/Implementation    -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP  -c LYCharUtils.c
+icc -DHAVE_CONFIG_H  -DLOCALEDIR=\"/usr/share/locale\" -I. -I.. -Ichrtrans -I./chrtrans -I.. -I../src -I.././WWW/Library/Implementation    -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP  -c LYMap.c
+icc -DHAVE_CONFIG_H  -DLOCALEDIR=\"/usr/share/locale\" -I. -I.. -Ichrtrans -I./chrtrans -I.. -I../src -I.././WWW/Library/Implementation    -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP  -c LYCookie.c
+icc -DHAVE_CONFIG_H  -DLOCALEDIR=\"/usr/share/locale\" -I. -I.. -Ichrtrans -I./chrtrans -I.. -I../src -I.././WWW/Library/Implementation    -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP  -c LYStyle.c
+icc -DHAVE_CONFIG_H  -DLOCALEDIR=\"/usr/share/locale\" -I. -I.. -Ichrtrans -I./chrtrans -I.. -I../src -I.././WWW/Library/Implementation    -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP  -c LYHash.c
+icc -DHAVE_CONFIG_H  -DLOCALEDIR=\"/usr/share/locale\" -I. -I.. -Ichrtrans -I./chrtrans -I.. -I../src -I.././WWW/Library/Implementation    -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP  -c LYPrettySrc.c
+icc -DHAVE_CONFIG_H  -DLOCALEDIR=\"/usr/share/locale\" -I. -I.. -Ichrtrans -I./chrtrans -I.. -I../src -I.././WWW/Library/Implementation    -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP  -c TRSTable.c
+icc -DHAVE_CONFIG_H  -DLOCALEDIR=\"/usr/share/locale\" -I. -I.. -Ichrtrans -I./chrtrans -I.. -I../src -I.././WWW/Library/Implementation    -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP  -c parsdate.c
+icc -DHAVE_CONFIG_H  -DLOCALEDIR=\"/usr/share/locale\" -I. -I.. -Ichrtrans -I./chrtrans -I.. -I../src -I.././WWW/Library/Implementation    -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP  -c UCdomap.c
+icc -DHAVE_CONFIG_H  -DLOCALEDIR=\"/usr/share/locale\" -I. -I.. -Ichrtrans -I./chrtrans -I.. -I../src -I.././WWW/Library/Implementation    -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP  -c UCAux.c
+icc -DHAVE_CONFIG_H  -DLOCALEDIR=\"/usr/share/locale\" -I. -I.. -Ichrtrans -I./chrtrans -I.. -I../src -I.././WWW/Library/Implementation    -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP  -c UCAuto.c
+icc -DHAVE_CONFIG_H  -DLOCALEDIR=\"/usr/share/locale\" -I. -I.. -Ichrtrans -I./chrtrans -I.. -I../src -I.././WWW/Library/Implementation    -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP  -c tidy_tls.c
+icc -DHAVE_CONFIG_H  -DLOCALEDIR=\"/usr/share/locale\" -I. -I.. -Ichrtrans -I./chrtrans -I.. -I../src -I.././WWW/Library/Implementation    -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP  -c LYSession.c
+icc -DHAVE_CONFIG_H  -DLOCALEDIR=\"/usr/share/locale\" -I. -I.. -Ichrtrans -I./chrtrans -I.. -I../src -I.././WWW/Library/Implementation    -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP  -c LYExtern.c
+icc -DHAVE_CONFIG_H  -DLOCALEDIR=\"/usr/share/locale\" -I. -I.. -Ichrtrans -I./chrtrans -I.. -I../src -I.././WWW/Library/Implementation    -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP  -c LYLocal.c
+Linking and creating Lynx executable
+icc -DHAVE_CONFIG_H  -DLOCALEDIR=\"/usr/share/locale\" -I. -I.. -Ichrtrans -I./chrtrans -I.. -I../src -I.././WWW/Library/Implementation    -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/lynx/lynx=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -Wall -DNO_BUILDSTAMP  -Wl,-z,relro -Wl,-z,now -Wl,--as-needed,--gc-sections,--relax -o lynx  LYebcdic.o LYClean.o LYShowInfo.o LYEdit.o LYStrings.o LYMail.o HTAlert.o GridText.o LYGetFile.o LYMain.o LYMainLoop.o LYCurses.o LYBookmark.o LYmktime.o LYUtils.o LYOptions.o LYReadCFG.o LYSearch.o LYHistory.o LYForms.o LYPrint.o LYrcFile.o LYDownload.o LYNews.o LYKeymap.o HTML.o HTFWriter.o HTInit.o DefaultStyle.o LYUpload.o LYLeaks.o LYexit.o LYJump.o LYList.o LYCgi.o LYTraversal.o LYEditmap.o LYCharSets.o LYCharUtils.o LYMap.o LYCookie.o LYStyle.o LYHash.o LYPrettySrc.o TRSTable.o parsdate.o UCdomap.o UCAux.o UCAuto.o  tidy_tls.o LYSession.o LYExtern.o LYLocal.o  .././WWW/Library/Implementation/libwww.a -lz -lbz2 -lidn -lncursesw -ltinfo -lgnutls -lbsd    
+Copying Lynx executable into top-level directory
+rm -f ../lynx
+cp lynx ../
+Welcome to Lynx!
+make[2]: Leaving directory '/dev/shm/builddeps/lynx/lynx/src'
+make[1]: Leaving directory '/dev/shm/builddeps/lynx/lynx'
+   dh_auto_test
+   create-stamp debian/debhelper-build-stamp
+   dh_testroot
+   dh_prep
+   debian/rules override_dh_auto_install
+make[1]: Entering directory '/dev/shm/builddeps/lynx/lynx'
+dh_auto_install --verbose -- install-full
+	install -d /dev/shm/builddeps/lynx/lynx/debian/tmp
+	make -j8 install DESTDIR=/dev/shm/builddeps/lynx/lynx/debian/tmp AM_UPDATE_INFO_DIR=no install-full
+make[2]: Entering directory '/dev/shm/builddeps/lynx/lynx'
+mkdir -p /dev/shm/builddeps/lynx/lynx/debian/tmp/usr/bin
+mkdir -p /dev/shm/builddeps/lynx/lynx/debian/tmp/usr/share/man/man1
+mkdir -p /dev/shm/builddeps/lynx/lynx/debian/tmp/etc/lynx
+mkdir -p /dev/shm/builddeps/lynx/lynx/debian/tmp/usr/share/lynx_help
+mkdir -p /dev/shm/builddeps/lynx/lynx/debian/tmp/usr/share/lynx_doc
+Making htmlized lynx.cfg
+Making htmlized lynx.cfg
+Making htmlized lynx.cfg
+cd ./src && make -w -j8 --jobserver-auth=3,4 -- AM_UPDATE_INFO_DIR=no DESTDIR=/dev/shm/builddeps/lynx/lynx/debian/tmp DESTDIR="/dev/shm/builddeps/lynx/lynx/debian/tmp" CC="icc" LYReadCFG.i
+cd ./src && make -w -j8 --jobserver-auth=3,4 -- AM_UPDATE_INFO_DIR=no DESTDIR=/dev/shm/builddeps/lynx/lynx/debian/tmp DESTDIR="/dev/shm/builddeps/lynx/lynx/debian/tmp" CC="icc" LYReadCFG.i
+cd ./src && make -w -j8 --jobserver-auth=3,4 -- AM_UPDATE_INFO_DIR=no DESTDIR=/dev/shm/builddeps/lynx/lynx/debian/tmp DESTDIR="/dev/shm/builddeps/lynx/lynx/debian/tmp" CC="icc" LYReadCFG.i
+cd ./po && make -w -j8 --jobserver-auth=3,4 -- AM_UPDATE_INFO_DIR=no DESTDIR=/dev/shm/builddeps/lynx/lynx/debian/tmp DESTDIR="/dev/shm/builddeps/lynx/lynx/debian/tmp" CC="icc" install
+/usr/bin/install -m 644 ./lynx.man /dev/shm/builddeps/lynx/lynx/debian/tmp/usr/share/man/man1/`echo lynx|sed 's,^,x86_64-linux-gnu-,'`.1
+make[3]: Entering directory '/dev/shm/builddeps/lynx/lynx/src'
+make[3]: warning: -j8 forced in submake: resetting jobserver mode.
+make[3]: Entering directory '/dev/shm/builddeps/lynx/lynx/po'
+make[3]: Entering directory '/dev/shm/builddeps/lynx/lynx/src'
+make[3]: warning: -j8 forced in submake: resetting jobserver mode.
+make[3]: warning: -j8 forced in submake: resetting jobserver mode.
+make[3]: Entering directory '/dev/shm/builddeps/lynx/lynx/src'
+make[3]: warning: -j8 forced in submake: resetting jobserver mode.
+icc -E -C -DHAVE_CONFIG_H  -DLOCALEDIR=\"/usr/share/locale\" -I. -I.. -Ichrtrans -I./chrtrans -I.. -I../src -I../WWW/Library/Implementation    -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 LYReadCFG.c >LYReadCFG.i
+mkdir -p /dev/shm/builddeps/lynx/lynx/debian/tmp/usr/share
+icc -E -C -DHAVE_CONFIG_H  -DLOCALEDIR=\"/usr/share/locale\" -I. -I.. -Ichrtrans -I./chrtrans -I.. -I../src -I../WWW/Library/Implementation    -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 LYReadCFG.c >LYReadCFG.i
+icc -E -C -DHAVE_CONFIG_H  -DLOCALEDIR=\"/usr/share/locale\" -I. -I.. -Ichrtrans -I./chrtrans -I.. -I../src -I../WWW/Library/Implementation    -Wdate-time -D_FORTIFY_SOURCE=2 -D_GNU_SOURCE -D_DEFAULT_SOURCE -DLINUX -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 LYReadCFG.c >LYReadCFG.i
+** installing ./samples/lynx.lss as /dev/shm/builddeps/lynx/lynx/debian/tmp/etc/lynx/lynx.lss
+Copying sample files
+/bin/bash -c '\
+	( umask 022; \
+	  cd . && \
+	  /bin/tar -cf - C[HO]* PROBLEMS README docs samples test ) | \
+	( umask 022; \
+	  cd /dev/shm/builddeps/lynx/lynx/debian/tmp/usr/share/lynx_doc && \
+	  chmod -R u+w . && /bin/tar -xf - )'
+** installing ./lynx.cfg as /dev/shm/builddeps/lynx/lynx/debian/tmp/etc/lynx/lynx.cfg
+installing ca.gmo as /dev/shm/builddeps/lynx/lynx/debian/tmp/usr/share/locale/ca/LC_MESSAGES/lynx.mo
+/bin/bash -c 'if test "/bin/gzip -9 -n" != "" ; then \
+	(cd /dev/shm/builddeps/lynx/lynx/debian/tmp/usr/share/lynx_doc && /bin/gzip -9 -n -f docs/CHANGES*.[0-9] docs/*.announce ) \
+fi'
+installing cs.gmo as /dev/shm/builddeps/lynx/lynx/debian/tmp/usr/share/locale/cs/LC_MESSAGES/lynx.mo
+installing da.gmo as /dev/shm/builddeps/lynx/lynx/debian/tmp/usr/share/locale/da/LC_MESSAGES/lynx.mo
+installing de.gmo as /dev/shm/builddeps/lynx/lynx/debian/tmp/usr/share/locale/de/LC_MESSAGES/lynx.mo
+installing eo.gmo as /dev/shm/builddeps/lynx/lynx/debian/tmp/usr/share/locale/eo/LC_MESSAGES/lynx.mo
+installing et.gmo as /dev/shm/builddeps/lynx/lynx/debian/tmp/usr/share/locale/et/LC_MESSAGES/lynx.mo
+installing fi.gmo as /dev/shm/builddeps/lynx/lynx/debian/tmp/usr/share/locale/fi/LC_MESSAGES/lynx.mo
+/bin/bash -c 'for name in COPYING COPYHEADER; do \
+	cd /dev/shm/builddeps/lynx/lynx/debian/tmp/usr/share/lynx_help && rm -f $name ;\
+	r= ;\
+	test "ln -s" = "ln -s" || r=`echo /usr/share/lynx_help|sed -e "s%[^/]\+%..%g" -e "s%^.%%"`; \
+	cd /dev/shm/builddeps/lynx/lynx/debian/tmp/usr/share/lynx_help && ( ln -s $r/usr/share/lynx_doc/$name . || cp /dev/shm/builddeps/lynx/lynx/debian/tmp/usr/share/lynx_doc/$name . );\
+	done'
+installing fr.gmo as /dev/shm/builddeps/lynx/lynx/debian/tmp/usr/share/locale/fr/LC_MESSAGES/lynx.mo
+installing hu.gmo as /dev/shm/builddeps/lynx/lynx/debian/tmp/usr/share/locale/hu/LC_MESSAGES/lynx.mo
+/bin/bash -c 'case `id|sed -e "s/(.*//"` in uid=0) chown -R root /dev/shm/builddeps/lynx/lynx/debian/tmp/usr/share/lynx_doc;; esac'
+installing id.gmo as /dev/shm/builddeps/lynx/lynx/debian/tmp/usr/share/locale/id/LC_MESSAGES/lynx.mo
+installing it.gmo as /dev/shm/builddeps/lynx/lynx/debian/tmp/usr/share/locale/it/LC_MESSAGES/lynx.mo
+installing ja.gmo as /dev/shm/builddeps/lynx/lynx/debian/tmp/usr/share/locale/ja/LC_MESSAGES/lynx.mo
+installing nl.gmo as /dev/shm/builddeps/lynx/lynx/debian/tmp/usr/share/locale/nl/LC_MESSAGES/lynx.mo
+installing pt_BR.gmo as /dev/shm/builddeps/lynx/lynx/debian/tmp/usr/share/locale/pt_BR/LC_MESSAGES/lynx.mo
+installing ru.gmo as /dev/shm/builddeps/lynx/lynx/debian/tmp/usr/share/locale/ru/LC_MESSAGES/lynx.mo
+installing sl.gmo as /dev/shm/builddeps/lynx/lynx/debian/tmp/usr/share/locale/sl/LC_MESSAGES/lynx.mo
+installing sv.gmo as /dev/shm/builddeps/lynx/lynx/debian/tmp/usr/share/locale/sv/LC_MESSAGES/lynx.mo
+installing tr.gmo as /dev/shm/builddeps/lynx/lynx/debian/tmp/usr/share/locale/tr/LC_MESSAGES/lynx.mo
+installing uk.gmo as /dev/shm/builddeps/lynx/lynx/debian/tmp/usr/share/locale/uk/LC_MESSAGES/lynx.mo
+make[3]: Leaving directory '/dev/shm/builddeps/lynx/lynx/src'
+make[3]: Leaving directory '/dev/shm/builddeps/lynx/lynx/src'
+make[3]: Leaving directory '/dev/shm/builddeps/lynx/lynx/src'
+sed -n -e '/Config_Type  *Config_Table/,/{0, *0, *0}/ p' ./src/LYReadCFG.i | \
+sed  -e 's/ *{ *"\([^"]*\)".*/\1/' | \
+perl ./scripts/cfg2html.pl -ams ./lynx.cfg
+sed -n -e '/Config_Type  *Config_Table/,/{0, *0, *0}/ p' ./src/LYReadCFG.i | \
+sed  -e 's/ *{ *"\([^"]*\)".*/\1/' | \
+perl ./scripts/cfg2html.pl -ams ./lynx.cfg
+sed -n -e '/Config_Type  *Config_Table/,/{0, *0, *0}/ p' ./src/LYReadCFG.i | \
+sed  -e 's/ *{ *"\([^"]*\)".*/\1/' | \
+perl ./scripts/cfg2html.pl -ams ./lynx.cfg
+installing vi.gmo as /dev/shm/builddeps/lynx/lynx/debian/tmp/usr/share/locale/vi/LC_MESSAGES/lynx.mo
+installing zh_CN.gmo as /dev/shm/builddeps/lynx/lynx/debian/tmp/usr/share/locale/zh_CN/LC_MESSAGES/lynx.mo
+installing zh_TW.gmo as /dev/shm/builddeps/lynx/lynx/debian/tmp/usr/share/locale/zh_TW/LC_MESSAGES/lynx.mo
+installing en.gmo as /dev/shm/builddeps/lynx/lynx/debian/tmp/usr/share/locale/en/LC_MESSAGES/lynx.mo
+if test "lynx" = "gettext"; then \
+  mkdir -p /dev/shm/builddeps/lynx/lynx/debian/tmp/usr/share/gettext/po; \
+  /usr/bin/install -m 644 ./makefile.inn \
+		  /dev/shm/builddeps/lynx/lynx/debian/tmp/usr/share/gettext/po/makefile.inn; \
+else \
+  : ; \
+fi
+make[3]: Leaving directory '/dev/shm/builddeps/lynx/lynx/po'
+/bin/bash -c "P=`echo lynx|sed 's,^,x86_64-linux-gnu-,'`; \
+if test -f /dev/shm/builddeps/lynx/lynx/debian/tmp/usr/bin/$P ; then \
+      mv -f /dev/shm/builddeps/lynx/lynx/debian/tmp/usr/bin/$P /dev/shm/builddeps/lynx/lynx/debian/tmp/usr/bin/$P.old; fi"
+/usr/bin/install lynx /dev/shm/builddeps/lynx/lynx/debian/tmp/usr/bin/`echo lynx|sed 's,^,x86_64-linux-gnu-,'`
+
+Use make install-help to install the help-files
+Use make install-doc to install extra documentation files
+
+Can't open ./tmp244: No such file or directory
+Can't open ./tmp146: No such file or directory
+rm -f ./src/LYReadCFG.i
+rm -f ./src/LYReadCFG.i
+rm -f ./src/LYReadCFG.i
+/bin/bash -c 'if cd "/dev/shm/builddeps/lynx/lynx/debian/tmp/usr/share/lynx_help" ; then \
+	WD=`pwd` ; \
+	TAIL=`basename "/usr/share/lynx_help"` ; \
+	HEAD=`echo "$WD"|sed -e "s,/${TAIL}$,,"` ; \
+	test "x$WD" != "x$HEAD" && rm -fr * ; \
+	fi'
+test -d /dev/shm/builddeps/lynx/lynx/debian/tmp/usr/share/lynx_help/keystrokes || mkdir /dev/shm/builddeps/lynx/lynx/debian/tmp/usr/share/lynx_help/keystrokes
+Translating/copying html files
+/bin/bash -c 'sed_prog=`pwd`/help_files.sed && \
+	cd ./lynx_help && \
+	dirs=keystrokes && \
+	files="*.html */*.html" && \
+	for f in $files ; do \
+		sed -f $sed_prog $f > /dev/shm/builddeps/lynx/lynx/debian/tmp/usr/share/lynx_help/$f ; \
+	done && \
+	if test "/bin/gzip -9 -n" != "" ; then \
+		(cd /dev/shm/builddeps/lynx/lynx/debian/tmp/usr/share/lynx_help && /bin/gzip -9 -n $files ) \
+	fi'
+Updating /etc/lynx/lynx.cfg
+/bin/bash -c \
+'if test -f /dev/shm/builddeps/lynx/lynx/debian/tmp/etc/lynx/lynx.cfg ; then \
+	mv /dev/shm/builddeps/lynx/lynx/debian/tmp/etc/lynx/lynx.cfg /dev/shm/builddeps/lynx/lynx/debian/tmp/etc/lynx/lynx.tmp ; \
+else \
+	cp ./lynx.cfg /dev/shm/builddeps/lynx/lynx/debian/tmp/etc/lynx/lynx.tmp ; \
+fi'
+Updating /etc/lynx/lynx.cfg to point to installed help-files
+sed	-e '/^HELPFILE:http/s!^!#!' \
+	-e '/^#HELPFILE:file/s!#!!' \
+	/dev/shm/builddeps/lynx/lynx/debian/tmp/etc/lynx/lynx.tmp | \
+/bin/bash ./scripts/cfg_path.sh lynx_help /usr/share/lynx_help | \
+/bin/bash ./scripts/cfg_path.sh lynx_doc  /usr/share/lynx_help | \
+sed	-e '/^HELPFILE:file/s!$!.gz!' \
+	-e '/^HELPFILE:file/s!.gz.gz$!.gz!' \
+	>/dev/shm/builddeps/lynx/lynx/debian/tmp/etc/lynx/lynx.cfg
+chmod 644 /dev/shm/builddeps/lynx/lynx/debian/tmp/etc/lynx/lynx.cfg
+rm -f /dev/shm/builddeps/lynx/lynx/debian/tmp/etc/lynx/lynx.tmp
+Full installation complete.
+make[2]: Leaving directory '/dev/shm/builddeps/lynx/lynx'
+cd debian/tmp/usr/share/lynx_help && rm -vf COPYING COPYHEADER
+cd debian/tmp/usr/share/lynx_doc && rm -rvf CHANGES \
+	COPYHEADER.asc COPYING COPYING.asc samples test
+removed 'CHANGES'
+removed 'COPYHEADER.asc'
+removed 'COPYING'
+removed 'COPYING.asc'
+removed 'samples/blue-background.lss'
+removed 'samples/bright-blue.lss'
+removed 'samples/cernrules.txt'
+removed 'samples/home.htm'
+removed 'samples/installdirs.html'
+removed 'samples/jumps.htm'
+removed 'samples/jumpsUnix.html'
+removed 'samples/jumpsVMS.html'
+removed 'samples/keepviewer'
+removed 'samples/lynx-demo.cfg'
+removed 'samples/lynx-keymaps'
+removed 'samples/lynx.bat'
+removed 'samples/lynx.com'
+removed 'samples/lynx.ico'
+removed 'samples/lynx.lss'
+removed 'samples/lynx_bookmarks.htm'
+removed 'samples/lynxdump'
+removed 'samples/mailcap'
+removed 'samples/mailto-form.pl'
+removed 'samples/midnight.lss'
+removed 'samples/mild-colors.lss'
+removed 'samples/mime.types'
+removed 'samples/oldlynx'
+removed 'samples/oldlynx.bat'
+removed 'samples/opaque.lss'
+removed directory 'samples'
+removed 'test/ALT88592.html'
+removed 'test/ISO_LATIN1_test.html'
+removed 'test/README.txt'
+removed 'test/TestComment.html'
+removed 'test/X'
+removed 'test/bad-html.html'
+removed 'test/c1.html'
+removed 'test/circle.html'
+removed 'test/cp-1252.html'
+removed 'test/cp-1252a.html'
+removed 'test/image.jpg'
+removed 'test/iso-8859-1.html'
+removed 'test/iso-8859-1a.html'
+removed 'test/iso-8859-2.html'
+removed 'test/iso-8859-2a.html'
+removed 'test/koi8-r.html'
+removed 'test/nobody'
+removed 'test/quickbrown.html'
+removed 'test/raw8bit.html'
+removed 'test/sgml.html'
+removed 'test/spaces.html'
+removed 'test/special_urls.html'
+removed 'test/square.html'
+removed 'test/tabtest.html'
+removed 'test/tags.html'
+removed 'test/test-styles.html'
+removed 'test/triangle.html'
+removed 'test/unicode.html'
+removed 'test/utf-8-demo.html'
+removed directory 'test'
+make[1]: Leaving directory '/dev/shm/builddeps/lynx/lynx'
+   dh_install
+   dh_installdocs
+   dh_installchangelogs
+   dh_installman
+   dh_installmenu
+   dh_installmime
+   dh_lintian
+   dh_perl
+   debian/rules override_dh_link
+make[1]: Entering directory '/dev/shm/builddeps/lynx/lynx'
+rm -fv debian/lynx/usr/share/doc/lynx/changelog
+removed 'debian/lynx/usr/share/doc/lynx/changelog'
+dh_link
+make[1]: Leaving directory '/dev/shm/builddeps/lynx/lynx'
+   dh_strip_nondeterminism
+	Normalized debian/lynx-common/usr/share/locale/zh_TW/LC_MESSAGES/lynx.mo
+	Normalized debian/lynx-common/usr/share/locale/zh_CN/LC_MESSAGES/lynx.mo
+	Normalized debian/lynx-common/usr/share/locale/vi/LC_MESSAGES/lynx.mo
+	Normalized debian/lynx-common/usr/share/locale/uk/LC_MESSAGES/lynx.mo
+	Normalized debian/lynx-common/usr/share/locale/tr/LC_MESSAGES/lynx.mo
+	Normalized debian/lynx-common/usr/share/locale/sv/LC_MESSAGES/lynx.mo
+	Normalized debian/lynx-common/usr/share/locale/sl/LC_MESSAGES/lynx.mo
+	Normalized debian/lynx-common/usr/share/locale/ru/LC_MESSAGES/lynx.mo
+	Normalized debian/lynx-common/usr/share/locale/pt_BR/LC_MESSAGES/lynx.mo
+	Normalized debian/lynx-common/usr/share/locale/nl/LC_MESSAGES/lynx.mo
+	Normalized debian/lynx-common/usr/share/locale/ja/LC_MESSAGES/lynx.mo
+	Normalized debian/lynx-common/usr/share/locale/it/LC_MESSAGES/lynx.mo
+	Normalized debian/lynx-common/usr/share/locale/id/LC_MESSAGES/lynx.mo
+	Normalized debian/lynx-common/usr/share/locale/hu/LC_MESSAGES/lynx.mo
+	Normalized debian/lynx-common/usr/share/locale/fr/LC_MESSAGES/lynx.mo
+	Normalized debian/lynx-common/usr/share/locale/fi/LC_MESSAGES/lynx.mo
+	Normalized debian/lynx-common/usr/share/locale/et/LC_MESSAGES/lynx.mo
+	Normalized debian/lynx-common/usr/share/locale/eo/LC_MESSAGES/lynx.mo
+	Normalized debian/lynx-common/usr/share/locale/en/LC_MESSAGES/lynx.mo
+	Normalized debian/lynx-common/usr/share/locale/de/LC_MESSAGES/lynx.mo
+	Normalized debian/lynx-common/usr/share/locale/da/LC_MESSAGES/lynx.mo
+	Normalized debian/lynx-common/usr/share/locale/cs/LC_MESSAGES/lynx.mo
+	Normalized debian/lynx-common/usr/share/locale/ca/LC_MESSAGES/lynx.mo
+   dh_compress
+   dh_fixperms
+   dh_missing
+   dh_strip
+   dh_makeshlibs
+   dh_shlibdeps
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/lynx/usr/bin/x86_64-linux-gnu-lynx was not linked against libgcc_s.so.1 (it uses none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/lynx/usr/bin/x86_64-linux-gnu-lynx was not linked against libdl.so.2 (it uses none of the library's symbols)
+   dh_installdeb
+   dh_gencontrol
+   dh_md5sums
+   dh_builddeb
+dpkg-deb: building package 'lynx-common' in '../lynx-common_2.8.9rel.1-2_all.deb'.
+dpkg-deb: building package 'lynx' in '../lynx_2.8.9rel.1-2_amd64.deb'.
+dpkg-deb: building package 'lynx-dbgsym' in '../lynx-dbgsym_2.8.9rel.1-2_amd64.deb'.
+ dpkg-genbuildinfo --build=binary
+ dpkg-genchanges --build=binary >../lynx_2.8.9rel.1-2_amd64.changes
+dpkg-genchanges: info: binary-only upload (no source code included)
+ dpkg-source --after-build .
+dpkg-source: info: unapplying nested_tables.patch
+dpkg-source: info: unapplying 21_do_not_strip_-g.diff
+dpkg-source: info: unapplying aboutlynx.patch
+dpkg-source: info: unapplying lynxcfg.patch
+dpkg-buildpackage: info: binary-only upload (no source included)
+Now running lintian lynx_2.8.9rel.1-2_amd64.changes ...
+E: lynx: embedded-library usr/bin/x86_64-linux-gnu-lynx: libidn
+W: lynx: hardening-no-pie usr/bin/x86_64-linux-gnu-lynx
+W: lynx: menu-command-not-in-package usr/share/menu/lynx:2 lynx
+N: 0 tags overridden; 1 unused override
+Finished running lintian.

@@ -1,0 +1,6 @@
+version=3
+#opts=passive,pgpsigurlmangle=s/$/.asc/ \
+#ftp://ftp.invisible-island.net/lynx/tarballs/ lynx(\d[^\s/]*)\.tar\.bz2
+
+opts=pgpsigurlmangle=s/$/.asc/ \
+https://invisible-mirror.net/archives/lynx/tarballs/ lynx(\d[^\s/]*)\.tar\.bz2

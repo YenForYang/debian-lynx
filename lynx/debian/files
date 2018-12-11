@@ -1,0 +1,4 @@
+lynx-common_2.8.9rel.1-2_all.deb web optional
+lynx-dbgsym_2.8.9rel.1-2_amd64.deb debug optional automatic=yes
+lynx_2.8.9rel.1-2_amd64.buildinfo web optional
+lynx_2.8.9rel.1-2_amd64.deb web optional

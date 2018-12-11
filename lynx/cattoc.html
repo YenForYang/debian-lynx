@@ -1,0 +1,422 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<link rev="made" href="mailto:lynx-dev@nongnu.org">
+<title>lynx.cfg settings by category</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="description" content=
+"These are the categories for Lynx's settings in lynx.cfg, with summary descriptions and links to each setting.">
+</head>
+<body>
+<p>These are the major categories of configuration settings in Lynx:
+<ul>
+<li><a href="#header000">Appearance</a>
+<li><a href="#header001">Auxiliary Facilities</a>
+<li><a href="#header002">Bibliographic Protocol (bibp scheme)</a>
+<li><a href="#header003">CGI scripts</a>
+<li><a href="#header004">Character Sets</a>
+<li><a href="#header005">Cookies</a>
+<li><a href="#header006">Dump/Crawl</a>
+<li><a href="#header007">External Programs</a>
+<li><a href="#header008">HTML Parsing</a>
+<li><a href="#header009">Interaction</a>
+<li><a href="#header010">Internal Behavior</a>
+<li><a href="#header011">Keyboard Input</a>
+<li><a href="#header012">Mail-related</a>
+<li><a href="#header013">News-groups</a>
+<li><a href="#header014">Proxy</a>
+<li><a href="#header015">Session support</a>
+<li><a href="#header016">Timeouts</a>
+</ul>
+
+<h2><a name="header000">Appearance</a></h2>
+<h3>Description</h3>
+<p>These settings control the appearance of Lynx's screen and the way
+Lynx renders some tags.
+
+<p>Here is a list of settings that belong to this category
+<ul>
+<li><a href="body.html#ASSUMED_COLOR">ASSUMED_COLOR</a>
+<li><a href="body.html#BOLD_H1">BOLD_H1</a>
+<li><a href="body.html#BOLD_HEADERS">BOLD_HEADERS</a>
+<li><a href="body.html#BOLD_NAME_ANCHORS">BOLD_NAME_ANCHORS</a>
+<li><a href="body.html#COLOR">COLOR</a>
+<li><a href="body.html#COLOR_STYLE">COLOR_STYLE</a>
+<li><a href="body.html#DEFAULT_COLORS">DEFAULT_COLORS</a>
+<li><a href="body.html#ENABLE_SCROLLBACK">ENABLE_SCROLLBACK</a>
+<li><a href="body.html#FTP_FORMAT">FTP_FORMAT</a>
+<li><a href="body.html#HTMLSRC_ATTRNAME_XFORM">HTMLSRC_ATTRNAME_XFORM</a>
+<li><a href="body.html#HTMLSRC_TAGNAME_XFORM">HTMLSRC_TAGNAME_XFORM</a>
+<li><a href="body.html#JUSTIFY">JUSTIFY</a>
+<li><a href="body.html#JUSTIFY_MAX_VOID_PERCENT">JUSTIFY_MAX_VOID_PERCENT</a>
+<li><a href="body.html#LIST_FORMAT">LIST_FORMAT</a>
+<li><a href="body.html#MAKE_LINKS_FOR_ALL_IMAGES">MAKE_LINKS_FOR_ALL_IMAGES</a>
+<li><a href="body.html#MAKE_PSEUDO_ALTS_FOR_INLINES">MAKE_PSEUDO_ALTS_FOR_INLINES</a>
+<li><a href="body.html#NESTED_TABLES">NESTED_TABLES</a>
+<li><a href="body.html#NO_MARGINS">NO_MARGINS</a>
+<li><a href="body.html#NO_TITLE">NO_TITLE</a>
+<li><a href="body.html#PREPEND_BASE_TO_SOURCE">PREPEND_BASE_TO_SOURCE</a>
+<li><a href="body.html#PRETTYSRC">PRETTYSRC</a>
+<li><a href="body.html#PRETTYSRC_SPEC">PRETTYSRC_SPEC</a>
+<li><a href="body.html#PRETTYSRC_VIEW_NO_ANCHOR_NUMBERING">PRETTYSRC_VIEW_NO_ANCHOR_NUMBERING</a>
+<li><a href="body.html#SCAN_FOR_BURIED_NEWS_REFS">SCAN_FOR_BURIED_NEWS_REFS</a>
+<li><a href="body.html#SCREEN_SIZE">SCREEN_SIZE*</a>
+<li><a href="body.html#SHORT_URL">SHORT_URL</a>
+<li><a href="body.html#SHOW_CURSOR">SHOW_CURSOR</a>
+<li><a href="body.html#SUBSTITUTE_UNDERSCORES">SUBSTITUTE_UNDERSCORES</a>
+<li><a href="body.html#UNDERLINE_LINKS">UNDERLINE_LINKS</a>
+<li><a href="body.html#UNIQUE_URLS">UNIQUE_URLS</a>
+<li><a href="body.html#USE_SELECT_POPUPS">USE_SELECT_POPUPS</a>
+<li><a href="body.html#VERBOSE_IMAGES">VERBOSE_IMAGES</a>
+</ul>
+
+<h2><a name="header001">Auxiliary Facilities</a></h2>
+<h3>Description</h3>
+<p>These settings control the auxiliary navigating facilities of lynx, e.g.,
+jumpfiles, bookmarks, default URLs.
+
+<p>Here is a list of settings that belong to this category
+<ul>
+<li><a href="body.html#BLOCK_MULTI_BOOKMARKS">BLOCK_MULTI_BOOKMARKS</a>
+<li><a href="body.html#DEFAULT_BOOKMARK_FILE">DEFAULT_BOOKMARK_FILE</a>
+<li><a href="body.html#DEFAULT_INDEX_FILE">DEFAULT_INDEX_FILE</a>
+<li><a href="body.html#HELPFILE">HELPFILE</a>
+<li><a href="body.html#INCLUDE">INCLUDE</a>
+<li><a href="body.html#JUMPBUFFER">JUMPBUFFER</a>
+<li><a href="body.html#JUMPFILE">JUMPFILE</a>
+<li><a href="body.html#MULTI_BOOKMARK_SUPPORT">MULTI_BOOKMARK_SUPPORT</a>
+<li><a href="body.html#STARTFILE">STARTFILE</a>
+</ul>
+
+<h2><a name="header002">Bibliographic Protocol (bibp scheme)</a></h2>
+<p>Here is a list of settings that belong to this category
+<ul>
+<li><a href="body.html#BIBP_BIBHOST">BIBP_BIBHOST</a>
+<li><a href="body.html#BIBP_GLOBAL_SERVER">BIBP_GLOBAL_SERVER*</a>
+</ul>
+
+<h2><a name="header003">CGI scripts</a></h2>
+<h3>Description</h3>
+<p>These settings control Lynx's ability to execute various types of scripts.
+
+<p>Here is a list of settings that belong to this category
+<ul>
+<li><a href="body.html#ALWAYS_TRUSTED_EXEC">ALWAYS_TRUSTED_EXEC</a>
+<li><a href="body.html#LOCAL_EXECUTION_LINKS_ALWAYS_ON">LOCAL_EXECUTION_LINKS_ALWAYS_ON</a>
+<li><a href="body.html#LOCAL_EXECUTION_LINKS_ON_BUT_NOT_REMOTE">LOCAL_EXECUTION_LINKS_ON_BUT_NOT_REMOTE</a>
+<li><a href="body.html#LYNXCGI_DOCUMENT_ROOT">LYNXCGI_DOCUMENT_ROOT</a>
+<li><a href="body.html#LYNXCGI_ENVIRONMENT">LYNXCGI_ENVIRONMENT</a>
+<li><a href="body.html#TRUSTED_EXEC">TRUSTED_EXEC</a>
+<li><a href="body.html#TRUSTED_LYNXCGI">TRUSTED_LYNXCGI</a>
+</ul>
+
+<h2><a name="header004">Character Sets</a></h2>
+<p>Here is a list of settings that belong to this category
+<ul>
+<li><a href="body.html#ASSUMED_DOC_CHARSET_CHOICE">ASSUMED_DOC_CHARSET_CHOICE*</a>
+<li><a href="body.html#ASSUME_CHARSET">ASSUME_CHARSET</a>
+<li><a href="body.html#ASSUME_LOCAL_CHARSET">ASSUME_LOCAL_CHARSET</a>
+<li><a href="body.html#ASSUME_UNREC_CHARSET">ASSUME_UNREC_CHARSET</a>
+<li><a href="body.html#CHARACTER_SET">CHARACTER_SET</a>
+<li><a href="body.html#CHARSETS_DIRECTORY">CHARSETS_DIRECTORY*</a>
+<li><a href="body.html#CHARSET_SWITCH_RULES">CHARSET_SWITCH_RULES*</a>
+<li><a href="body.html#CONV_JISX0201KANA">CONV_JISX0201KANA</a>
+<li><a href="body.html#DISPLAY_CHARSET_CHOICE">DISPLAY_CHARSET_CHOICE*</a>
+<li><a href="body.html#FORCE_8BIT_TOUPPER">FORCE_8BIT_TOUPPER</a>
+<li><a href="body.html#HTML5_CHARSETS">HTML5_CHARSETS</a>
+<li><a href="body.html#LOCALE_CHARSET">LOCALE_CHARSET</a>
+<li><a href="body.html#MESSAGE_LANGUAGE">MESSAGE_LANGUAGE</a>
+<li><a href="body.html#NCR_IN_BOOKMARKS">NCR_IN_BOOKMARKS</a>
+<li><a href="body.html#OUTGOING_MAIL_CHARSET">OUTGOING_MAIL_CHARSET</a>
+<li><a href="body.html#PREFERRED_CHARSET">PREFERRED_CHARSET</a>
+<li><a href="body.html#PREFERRED_LANGUAGE">PREFERRED_LANGUAGE</a>
+<li><a href="body.html#PREPEND_CHARSET_TO_SOURCE">PREPEND_CHARSET_TO_SOURCE</a>
+</ul>
+
+<h2><a name="header005">Cookies</a></h2>
+<p>Here is a list of settings that belong to this category
+<ul>
+<li><a href="body.html#ACCEPT_ALL_COOKIES">ACCEPT_ALL_COOKIES</a>
+<li><a href="body.html#COOKIE_ACCEPT_DOMAINS">COOKIE_ACCEPT_DOMAINS</a>
+<li><a href="body.html#COOKIE_FILE">COOKIE_FILE</a>
+<li><a href="body.html#COOKIE_LOOSE_INVALID_DOMAINS">COOKIE_LOOSE_INVALID_DOMAINS</a>
+<li><a href="body.html#COOKIE_QUERY_INVALID_DOMAINS">COOKIE_QUERY_INVALID_DOMAINS</a>
+<li><a href="body.html#COOKIE_REJECT_DOMAINS">COOKIE_REJECT_DOMAINS</a>
+<li><a href="body.html#COOKIE_SAVE_FILE">COOKIE_SAVE_FILE</a>
+<li><a href="body.html#COOKIE_STRICT_INVALID_DOMAINS">COOKIE_STRICT_INVALID_DOMAINS</a>
+<li><a href="body.html#FORCE_SSL_COOKIES_SECURE">FORCE_SSL_COOKIES_SECURE</a>
+<li><a href="body.html#MAX_COOKIES_BUFFER">MAX_COOKIES_BUFFER</a>
+<li><a href="body.html#MAX_COOKIES_DOMAIN">MAX_COOKIES_DOMAIN</a>
+<li><a href="body.html#MAX_COOKIES_GLOBAL">MAX_COOKIES_GLOBAL</a>
+<li><a href="body.html#PERSISTENT_COOKIES">PERSISTENT_COOKIES</a>
+<li><a href="body.html#SET_COOKIES">SET_COOKIES</a>
+</ul>
+
+<h2><a name="header006">Dump/Crawl</a></h2>
+<p>Here is a list of settings that belong to this category
+<ul>
+<li><a href="body.html#LISTONLY">LISTONLY</a>
+<li><a href="body.html#LIST_INLINE">LIST_INLINE</a>
+<li><a href="body.html#LOCALHOST">LOCALHOST</a>
+<li><a href="body.html#WITH_BACKSPACES">WITH_BACKSPACES</a>
+</ul>
+
+<h2><a name="header007">External Programs</a></h2>
+<h3>Description</h3>
+<p>MIME types and viewers!
+
+file extensions may be assigned to MIME types using
+the SUFFIX: definition.
+
+NOTE: It is normally preferable to define new extension mappings in
+EXTENSION_MAP files (see below) instead of here:  Definitions
+here are overridden by those in EXTENSION_MAP files and even by
+some built-in defaults in src/HTInit.c.  On the other hand,
+definitions here allow some more fields that are not possible
+in those files.
+
+Extension mappings have an effect mostly for ftp and local files,
+they are NOT used to determine the type of content for URLs with
+the http protocol.  This is because HTTP servers already specify
+the MIME type in the Content-Type header.  [It may still be
+necessary to set up an appropriate suffix for some MIME types,
+even if they are accessed only via the HTTP protocol, if the viewer
+(see below) for those MIME types requires a certain suffix for the
+temporary file passed to it.]
+These settings control the ability of Lynx to invoke various programs for
+the user.
+Any of the compiled-in pathnames of external programs can be overridden
+by specifying the corresponding xxx_PATH variable.  If the variable is
+given as an empty string, lynx will not use the program.  For a few cases,
+there are internal functions which can be used instead.
+
+<p>Here is a list of settings that belong to this category
+<ul>
+<li><a href="body.html#BZIP2_PATH">BZIP2_PATH</a>
+<li><a href="body.html#CHMOD_PATH">CHMOD_PATH</a>
+<li><a href="body.html#COMPRESS_PATH">COMPRESS_PATH</a>
+<li><a href="body.html#COPY_PATH">COPY_PATH</a>
+<li><a href="body.html#CSWING_PATH">CSWING_PATH*</a>
+<li><a href="body.html#DEFAULT_EDITOR">DEFAULT_EDITOR</a>
+<li><a href="body.html#DIRED_MENU">DIRED_MENU</a>
+<li><a href="body.html#DOWNLOADER">DOWNLOADER</a>
+<li><a href="body.html#EXTERNAL">EXTERNAL</a>
+<li><a href="body.html#EXTERNAL_MENU">EXTERNAL_MENU</a>
+<li><a href="body.html#GLOBAL_EXTENSION_MAP">GLOBAL_EXTENSION_MAP</a>
+<li><a href="body.html#GLOBAL_MAILCAP">GLOBAL_MAILCAP</a>
+<li><a href="body.html#GZIP_PATH">GZIP_PATH</a>
+<li><a href="body.html#INFLATE_PATH">INFLATE_PATH</a>
+<li><a href="body.html#INSTALL_PATH">INSTALL_PATH</a>
+<li><a href="body.html#MKDIR_PATH">MKDIR_PATH</a>
+<li><a href="body.html#MV_PATH">MV_PATH</a>
+<li><a href="body.html#PERSONAL_EXTENSION_MAP">PERSONAL_EXTENSION_MAP</a>
+<li><a href="body.html#PERSONAL_MAILCAP">PERSONAL_MAILCAP</a>
+<li><a href="body.html#PREFERRED_CONTENT_TYPE">PREFERRED_CONTENT_TYPE</a>
+<li><a href="body.html#PREFERRED_ENCODING">PREFERRED_ENCODING</a>
+<li><a href="body.html#PREFERRED_MEDIA_TYPES">PREFERRED_MEDIA_TYPES</a>
+<li><a href="body.html#PRINTER">PRINTER</a>
+<li><a href="body.html#RLOGIN_PATH">RLOGIN_PATH</a>
+<li><a href="body.html#RMDIR_PATH">RMDIR_PATH</a>
+<li><a href="body.html#RM_PATH">RM_PATH</a>
+<li><a href="body.html#SETFONT_PATH">SETFONT_PATH*</a>
+<li><a href="body.html#SUFFIX">SUFFIX</a>
+<li><a href="body.html#SUFFIX_ORDER">SUFFIX_ORDER</a>
+<li><a href="body.html#SYSLOG_REQUESTED_URLS">SYSLOG_REQUESTED_URLS</a>
+<li><a href="body.html#SYSLOG_TEXT">SYSLOG_TEXT</a>
+<li><a href="body.html#SYSTEM_EDITOR">SYSTEM_EDITOR</a>
+<li><a href="body.html#TAR_PATH">TAR_PATH</a>
+<li><a href="body.html#TELNET_PATH">TELNET_PATH</a>
+<li><a href="body.html#TN3270_PATH">TN3270_PATH</a>
+<li><a href="body.html#TOUCH_PATH">TOUCH_PATH</a>
+<li><a href="body.html#UNCOMPRESS_PATH">UNCOMPRESS_PATH</a>
+<li><a href="body.html#UNZIP_PATH">UNZIP_PATH</a>
+<li><a href="body.html#UPLOADER">UPLOADER</a>
+<li><a href="body.html#UUDECODE_PATH">UUDECODE_PATH</a>
+<li><a href="body.html#VIEWER">VIEWER</a>
+<li><a href="body.html#WAIT_VIEWER_TERMINATION">WAIT_VIEWER_TERMINATION</a>
+<li><a href="body.html#XLOADIMAGE_COMMAND">XLOADIMAGE_COMMAND</a>
+<li><a href="body.html#ZCAT_PATH">ZCAT_PATH</a>
+<li><a href="body.html#ZIP_PATH">ZIP_PATH</a>
+</ul>
+
+<h2><a name="header008">HTML Parsing</a></h2>
+<h3>Description</h3>
+<p>These settings control the way Lynx parses invalid HTML
+and how it may resolve such issues.
+
+<p>Here is a list of settings that belong to this category
+<ul>
+<li><a href="body.html#COLLAPSE_BR_TAGS">COLLAPSE_BR_TAGS</a>
+<li><a href="body.html#DONT_WRAP_PRE">DONT_WRAP_PRE</a>
+<li><a href="body.html#FORCE_EMPTY_HREFLESS_A">FORCE_EMPTY_HREFLESS_A</a>
+<li><a href="body.html#FORCE_HTML">FORCE_HTML</a>
+<li><a href="body.html#HIDDENLINKS">HIDDENLINKS</a>
+<li><a href="body.html#HIDDEN_LINK_MARKER">HIDDEN_LINK_MARKER</a>
+<li><a href="body.html#HISTORICAL_COMMENTS">HISTORICAL_COMMENTS</a>
+<li><a href="body.html#MINIMAL_COMMENTS">MINIMAL_COMMENTS</a>
+<li><a href="body.html#NO_ISMAP_IF_USEMAP">NO_ISMAP_IF_USEMAP</a>
+<li><a href="body.html#SEEK_FRAG_AREA_IN_CUR">SEEK_FRAG_AREA_IN_CUR</a>
+<li><a href="body.html#SEEK_FRAG_MAP_IN_CUR">SEEK_FRAG_MAP_IN_CUR</a>
+<li><a href="body.html#SOFT_DQUOTES">SOFT_DQUOTES</a>
+<li><a href="body.html#STRIP_DOTDOT_URLS">STRIP_DOTDOT_URLS</a>
+<li><a href="body.html#TAGSOUP">TAGSOUP</a>
+<li><a href="body.html#TRIM_BLANK_LINES">TRIM_BLANK_LINES</a>
+<li><a href="body.html#XHTML_PARSING">XHTML_PARSING</a>
+</ul>
+
+<h2><a name="header009">Interaction</a></h2>
+<h3>Description</h3>
+<p>These settings control interaction of the user with lynx.
+
+<p>Here is a list of settings that belong to this category
+<ul>
+<li><a href="body.html#DEFAULT_USER_MODE">DEFAULT_USER_MODE</a>
+<li><a href="body.html#FORCE_COOKIE_PROMPT">FORCE_COOKIE_PROMPT</a>
+<li><a href="body.html#FORCE_SSL_PROMPT">FORCE_SSL_PROMPT</a>
+<li><a href="body.html#FORMS_OPTIONS">FORMS_OPTIONS</a>
+<li><a href="body.html#GOTOBUFFER">GOTOBUFFER</a>
+<li><a href="body.html#JUMP_PROMPT">JUMP_PROMPT</a>
+<li><a href="body.html#LEFTARROW_IN_TEXTFIELD_PROMPT">LEFTARROW_IN_TEXTFIELD_PROMPT</a>
+<li><a href="body.html#NO_DOT_FILES">NO_DOT_FILES</a>
+<li><a href="body.html#PARTIAL">PARTIAL</a>
+<li><a href="body.html#PARTIAL_THRES">PARTIAL_THRES</a>
+<li><a href="body.html#QUIT_DEFAULT_YES">QUIT_DEFAULT_YES</a>
+<li><a href="body.html#SCROLLBAR">SCROLLBAR</a>
+<li><a href="body.html#SCROLLBAR_ARROW">SCROLLBAR_ARROW</a>
+<li><a href="body.html#SHOW_KB_NAME">SHOW_KB_NAME</a>
+<li><a href="body.html#SHOW_KB_RATE">SHOW_KB_RATE</a>
+<li><a href="body.html#SSL_CERT_FILE">SSL_CERT_FILE</a>
+<li><a href="body.html#SSL_CLIENT_CERT_FILE">SSL_CLIENT_CERT_FILE</a>
+<li><a href="body.html#SSL_CLIENT_KEY_FILE">SSL_CLIENT_KEY_FILE</a>
+<li><a href="body.html#TEXTFIELDS_NEED_ACTIVATION">TEXTFIELDS_NEED_ACTIVATION</a>
+<li><a href="body.html#URL_DOMAIN_PREFIXES">URL_DOMAIN_PREFIXES</a>
+<li><a href="body.html#URL_DOMAIN_SUFFIXES">URL_DOMAIN_SUFFIXES</a>
+<li><a href="body.html#USE_MOUSE">USE_MOUSE</a>
+</ul>
+
+<h2><a name="header010">Internal Behavior</a></h2>
+<h3>Description</h3>
+<p>These settings control internal lynx behavior - the way it interacts with the
+operating system and Internet.  Modifying these settings will not change
+the rendition of documents that you browse with lynx, but can change various
+delays and resource utilization.
+
+<p>Here is a list of settings that belong to this category
+<ul>
+<li><a href="body.html#ALWAYS_RESUBMIT_POSTS">ALWAYS_RESUBMIT_POSTS</a>
+<li><a href="body.html#AUTO_UNCACHE_DIRLISTS">AUTO_UNCACHE_DIRLISTS</a>
+<li><a href="body.html#BROKEN_FTP_EPSV">BROKEN_FTP_EPSV</a>
+<li><a href="body.html#BROKEN_FTP_RETR">BROKEN_FTP_RETR</a>
+<li><a href="body.html#CHECKMAIL">CHECKMAIL</a>
+<li><a href="body.html#DEFAULT_CACHE_SIZE">DEFAULT_CACHE_SIZE</a>
+<li><a href="body.html#DEFAULT_VIRTUAL_MEMORY_SIZE">DEFAULT_VIRTUAL_MEMORY_SIZE*</a>
+<li><a href="body.html#ENABLE_LYNXRC">ENABLE_LYNXRC</a>
+<li><a href="body.html#FTP_PASSIVE">FTP_PASSIVE</a>
+<li><a href="body.html#GUESS_SCHEME">GUESS_SCHEME</a>
+<li><a href="body.html#HTTP_PROTOCOL">HTTP_PROTOCOL</a>
+<li><a href="body.html#LOCALHOST_ALIAS">LOCALHOST_ALIAS</a>
+<li><a href="body.html#LOCAL_DOMAIN">LOCAL_DOMAIN</a>
+<li><a href="body.html#LYNX_HOST_NAME">LYNX_HOST_NAME</a>
+<li><a href="body.html#MAIL_SYSTEM_ERROR_LOGGING">MAIL_SYSTEM_ERROR_LOGGING</a>
+<li><a href="body.html#MAX_URI_SIZE">MAX_URI_SIZE</a>
+<li><a href="body.html#NONRESTARTING_SIGWINCH">NONRESTARTING_SIGWINCH</a>
+<li><a href="body.html#NO_FILE_REFERER">NO_FILE_REFERER</a>
+<li><a href="body.html#NO_FORCED_CORE_DUMP">NO_FORCED_CORE_DUMP</a>
+<li><a href="body.html#NO_FROM_HEADER">NO_FROM_HEADER</a>
+<li><a href="body.html#NO_REFERER_HEADER">NO_REFERER_HEADER</a>
+<li><a href="body.html#REFERER_WITH_QUERY">REFERER_WITH_QUERY</a>
+<li><a href="body.html#REUSE_TEMPFILES">REUSE_TEMPFILES</a>
+<li><a href="body.html#RULE">RULE</a>
+<li><a href="body.html#RULESFILE">RULESFILE</a>
+<li><a href="body.html#SAVE_SPACE">SAVE_SPACE</a>
+<li><a href="body.html#SOURCE_CACHE">SOURCE_CACHE</a>
+<li><a href="body.html#SOURCE_CACHE_FOR_ABORTED">SOURCE_CACHE_FOR_ABORTED</a>
+<li><a href="body.html#STATUS_BUFFER_SIZE">STATUS_BUFFER_SIZE</a>
+<li><a href="body.html#TRACK_INTERNAL_LINKS">TRACK_INTERNAL_LINKS</a>
+<li><a href="body.html#TRIM_INPUT_FIELDS">TRIM_INPUT_FIELDS</a>
+</ul>
+
+<h2><a name="header011">Keyboard Input</a></h2>
+<h3>Description</h3>
+<p>These settings control the way Lynx interprets user input.
+
+<p>Here is a list of settings that belong to this category
+<ul>
+<li><a href="body.html#CASE_SENSITIVE_ALWAYS_ON">CASE_SENSITIVE_ALWAYS_ON</a>
+<li><a href="body.html#DEFAULT_KEYPAD_MODE">DEFAULT_KEYPAD_MODE</a>
+<li><a href="body.html#DEFAULT_KEYPAD_MODE_IS_NUMBERS_AS_ARROWS">DEFAULT_KEYPAD_MODE_IS_NUMBERS_AS_ARROWS</a>
+<li><a href="body.html#EMACS_KEYS_ALWAYS_ON">EMACS_KEYS_ALWAYS_ON</a>
+<li><a href="body.html#KEYBOARD_LAYOUT">KEYBOARD_LAYOUT*</a>
+<li><a href="body.html#KEYMAP">KEYMAP</a>
+<li><a href="body.html#NUMBER_FIELDS_ON_LEFT">NUMBER_FIELDS_ON_LEFT</a>
+<li><a href="body.html#NUMBER_LINKS_ON_LEFT">NUMBER_LINKS_ON_LEFT</a>
+<li><a href="body.html#VI_KEYS_ALWAYS_ON">VI_KEYS_ALWAYS_ON</a>
+</ul>
+
+<h2><a name="header012">Mail-related</a></h2>
+<p>Here is a list of settings that belong to this category
+<ul>
+<li><a href="body.html#ALT_BLAT_MAIL">ALT_BLAT_MAIL*</a>
+<li><a href="body.html#BLAT_MAIL">BLAT_MAIL*</a>
+<li><a href="body.html#MAIL_ADRS">MAIL_ADRS*</a>
+<li><a href="body.html#SYSTEM_MAIL">SYSTEM_MAIL</a>
+<li><a href="body.html#SYSTEM_MAIL_FLAGS">SYSTEM_MAIL_FLAGS</a>
+<li><a href="body.html#USE_FIXED_RECORDS">USE_FIXED_RECORDS*</a>
+</ul>
+
+<h2><a name="header013">News-groups</a></h2>
+<p>Here is a list of settings that belong to this category
+<ul>
+<li><a href="body.html#LIST_NEWS_DATES">LIST_NEWS_DATES</a>
+<li><a href="body.html#LIST_NEWS_NUMBERS">LIST_NEWS_NUMBERS</a>
+<li><a href="body.html#LYNX_SIG_FILE">LYNX_SIG_FILE</a>
+<li><a href="body.html#NEWS_CHUNK_SIZE">NEWS_CHUNK_SIZE</a>
+<li><a href="body.html#NEWS_MAX_CHUNK">NEWS_MAX_CHUNK</a>
+<li><a href="body.html#NEWS_POSTING">NEWS_POSTING</a>
+<li><a href="body.html#NNTPSERVER">NNTPSERVER</a>
+</ul>
+
+<h2><a name="header014">Proxy</a></h2>
+<p>Here is a list of settings that belong to this category
+<ul>
+<li><a href="body.html#CSO_PROXY">CSO_PROXY</a>
+<li><a href="body.html#FINGER_PROXY">FINGER_PROXY</a>
+<li><a href="body.html#FTP_PROXY">FTP_PROXY</a>
+<li><a href="body.html#GOPHER_PROXY">GOPHER_PROXY</a>
+<li><a href="body.html#HTTPS_PROXY">HTTPS_PROXY</a>
+<li><a href="body.html#HTTP_PROXY">HTTP_PROXY</a>
+<li><a href="body.html#NEWSPOST_PROXY">NEWSPOST_PROXY</a>
+<li><a href="body.html#NEWSREPLY_PROXY">NEWSREPLY_PROXY</a>
+<li><a href="body.html#NEWS_PROXY">NEWS_PROXY</a>
+<li><a href="body.html#NNTP_PROXY">NNTP_PROXY</a>
+<li><a href="body.html#NO_PROXY">NO_PROXY</a>
+<li><a href="body.html#SNEWSPOST_PROXY">SNEWSPOST_PROXY</a>
+<li><a href="body.html#SNEWSREPLY_PROXY">SNEWSREPLY_PROXY</a>
+<li><a href="body.html#SNEWS_PROXY">SNEWS_PROXY</a>
+<li><a href="body.html#WAIS_PROXY">WAIS_PROXY</a>
+</ul>
+
+<h2><a name="header015">Session support</a></h2>
+<p>Here is a list of settings that belong to this category
+<ul>
+<li><a href="body.html#AUTO_SESSION">AUTO_SESSION</a>
+<li><a href="body.html#SESSION_FILE">SESSION_FILE</a>
+<li><a href="body.html#SESSION_LIMIT">SESSION_LIMIT</a>
+</ul>
+
+<h2><a name="header016">Timeouts</a></h2>
+<p>Here is a list of settings that belong to this category
+<ul>
+<li><a href="body.html#ALERTSECS">ALERTSECS</a>
+<li><a href="body.html#CONNECT_TIMEOUT">CONNECT_TIMEOUT</a>
+<li><a href="body.html#DEBUGSECS">DEBUGSECS*</a>
+<li><a href="body.html#INFOSECS">INFOSECS</a>
+<li><a href="body.html#MESSAGESECS">MESSAGESECS</a>
+<li><a href="body.html#NO_PAUSE">NO_PAUSE</a>
+<li><a href="body.html#READ_TIMEOUT">READ_TIMEOUT</a>
+<li><a href="body.html#REPLAYSECS">REPLAYSECS</a>
+</ul>
+<p>
+<a href=alphatoc.html>To list of settings by name</a>
+<p>Support for all settings suffixed with '*' was disabled at compile time.</body>
+</html>

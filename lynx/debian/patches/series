@@ -1,0 +1,4 @@
+lynxcfg.patch
+aboutlynx.patch
+21_do_not_strip_-g.diff
+nested_tables.patch

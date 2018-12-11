@@ -1,0 +1,12 @@
+Package: lynx-dbgsym
+Source: lynx
+Version: 2.8.9rel.1-2
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Debian Lynx Packaging Team <pkg-lynx-maint@lists.alioth.debian.org>
+Installed-Size: 1320
+Depends: lynx (= 2.8.9rel.1-2)
+Section: debug
+Priority: optional
+Description: debug symbols for lynx
+Build-Ids: 4b34b82e7bde296e8a22fdfe28a13fcbc125370b
